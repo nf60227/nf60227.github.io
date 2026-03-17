@@ -3,26 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ScoreStream — Live Sports Scores</title>
+<title>Claude ScoreStream — Live Sports Scores</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #090909;
-  --s1: #111111;
-  --s2: #181818;
-  --s3: #222222;
-  --border: rgba(255,255,255,0.07);
-  --border2: rgba(255,255,255,0.13);
-  --t1: #f0f0f0;
-  --t2: #888;
-  --t3: #505050;
-  --live: #22c55e;
-  --live-bg: rgba(34,197,94,0.07);
-  --ht-color: #f59e0b;
-  --accent: #3b82f6;
-  --danger: #ef4444;
+  --bg: #1a1310;
+  --s1: #211a15;
+  --s2: #2a2019;
+  --s3: #342820;
+  --border: rgba(255,200,150,0.08);
+  --border2: rgba(255,200,150,0.15);
+  --t1: #f5ede6;
+  --t2: #a08070;
+  --t3: #604840;
+  --live: #e8845a;
+  --live-bg: rgba(232,132,90,0.08);
+  --ht-color: #d4a056;
+  --accent: #d97757;
+  --danger: #e05c4a;
   --r: 10px;
   --rs: 6px;
 }
@@ -67,8 +67,8 @@ body {
 }
 
 @keyframes logo-pulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
-  50% { opacity: 0.7; box-shadow: 0 0 0 4px rgba(34,197,94,0); }
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(217,119,87,0.5); }
+  50% { opacity: 0.7; box-shadow: 0 0 0 4px rgba(217,119,87,0); }
 }
 
 .header-right {
@@ -192,7 +192,7 @@ body {
   line-height: 1.5;
 }
 
-.key-note a { color: #60a5fa; text-decoration: none; }
+.key-note a { color: #e8845a; text-decoration: none; }
 .key-note a:hover { text-decoration: underline; }
 
 /* ---- FILTER BAR ---- */
@@ -335,11 +335,11 @@ body {
   flex-shrink: 0;
 }
 
-.sp-soccer     { background: rgba(59,130,246,0.14); color: #60a5fa; }
-.sp-basketball { background: rgba(245,158,11,0.14); color: #fbbf24; }
-.sp-football   { background: rgba(34,197,94,0.14);  color: #4ade80; }
-.sp-hockey     { background: rgba(161,161,170,0.14); color: #a1a1aa; }
-.sp-baseball   { background: rgba(244,63,94,0.14);  color: #fb7185; }
+.sp-soccer     { background: rgba(217,119,87,0.15); color: #e8845a; }
+.sp-basketball { background: rgba(212,160,86,0.15); color: #d4a056; }
+.sp-football   { background: rgba(180,140,100,0.15);  color: #c49a64; }
+.sp-hockey     { background: rgba(160,128,112,0.15); color: #a08070; }
+.sp-baseball   { background: rgba(224,92,74,0.15);  color: #e05c4a; }
 
 .league-name {
   font-size: 12px;
@@ -380,7 +380,7 @@ body {
 .match-row:first-child { border-top: none; }
 .match-row:hover { background: var(--s2); }
 .match-row.row-live { background: var(--live-bg); }
-.match-row.row-live:hover { background: rgba(34,197,94,0.1); }
+.match-row.row-live:hover { background: rgba(217,119,87,0.12); }
 
 .team-home { text-align: right; min-width: 0; }
 .team-away { text-align: left;  min-width: 0; }
@@ -446,6 +446,19 @@ body {
 }
 
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.1} }
+
+/* ---- CLAUDE BADGE ---- */
+.claude-badge {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--t3);
+  border: 1px solid var(--border2);
+  border-radius: var(--rs);
+  padding: 2px 8px;
+  opacity: 0.75;
+}
 </style>
 </head>
 <body>
@@ -454,10 +467,11 @@ body {
   <div class="logo">
     <div class="logo-dot"></div>
     ScoreStream
+    <span class="claude-badge">by Claude</span>
   </div>
   <div class="header-right">
     <div class="refresh-info">
-      Refreshes in <span class="refresh-num" id="countdown">60</span>s
+      Live · refreshes in <span class="refresh-num" id="countdown">60</span>s
     </div>
     <button class="settings-btn" id="settings-toggle" title="API settings">⚙</button>
   </div>
@@ -502,7 +516,7 @@ body {
   <div id="main-content">
     <div class="loading-state">
       <div class="spinner"></div>
-      Connecting to TheSportsDB…
+      Fetching live scores…
     </div>
   </div>
 
