@@ -525,10 +525,13 @@ body {
 <script>
 // ─── Config ──────────────────────────────────────────────────────────────────
 const LEAGUES = [
-  { id: 4328, name: 'Premier League',   country: 'England', sport: 'soccer'     },
-  { id: 4335, name: 'La Liga',          country: 'Spain',   sport: 'soccer'     },
-  { id: 4387, name: 'NBA',              country: 'USA',     sport: 'basketball' },
-  { id: 4391, name: 'NFL',              country: 'USA',     sport: 'football'   },
+  { id: 4328, name: 'Premier League',    apiName: 'Premier League',        country: 'England',  sport: 'soccer'     },
+  { id: 4335, name: 'La Liga',           apiName: 'La Liga',               country: 'Spain',    sport: 'soccer'     },
+  { id: 4387, name: 'NBA',               apiName: 'NBA',                   country: 'USA',      sport: 'basketball' },
+  { id: 4389, name: 'WNBA',              apiName: 'WNBA',                  country: 'USA',      sport: 'basketball' },
+  { id: 4480, name: 'EuroLeague',        apiName: 'Euroleague Basketball', country: 'Europe',   sport: 'basketball' },
+  { id: 4479, name: 'NCAA Basketball',   apiName: 'NCAA Basketball',       country: 'USA',      sport: 'basketball' },
+  { id: 4391, name: 'NFL',               apiName: 'NFL',                   country: 'USA',      sport: 'football'   },
 ];
 
 const SPORT_LABEL = { soccer: 'Soccer', basketball: 'Basketball', football: 'Football' };
@@ -615,14 +618,30 @@ function getDisplayMinute(ev) {
 }
 
 // ─── Data fetching ───────────────────────────────────────────────────────────
+function fmtDate(d) {
+  return d.toISOString().split('T')[0];
+}
+
 async function fetchLeague(league) {
   const BASE = `https://www.thesportsdb.com/api/v1/json/${apiKey}`;
-  const [pastRes, nextRes] = await Promise.all([
+  const today = new Date();
+  const d1 = new Date(today); d1.setDate(today.getDate() - 1);
+  const d2 = new Date(today); d2.setDate(today.getDate() - 2);
+  const ln = encodeURIComponent(league.apiName);
+
+  const [pastRes, nextRes, day1Res, day2Res] = await Promise.all([
     fetch(`${BASE}/eventspastleague.php?id=${league.id}`).then(r => r.json()).catch(() => ({ events: [] })),
     fetch(`${BASE}/eventsnextleague.php?id=${league.id}`).then(r => r.json()).catch(() => ({ events: [] })),
+    fetch(`${BASE}/eventsday.php?d=${fmtDate(d1)}&l=${ln}`).then(r => r.json()).catch(() => ({ events: [] })),
+    fetch(`${BASE}/eventsday.php?d=${fmtDate(d2)}&l=${ln}`).then(r => r.json()).catch(() => ({ events: [] })),
   ]);
 
-  const raw = [...(pastRes.events || []), ...(nextRes.events || [])];
+  const raw = [
+    ...(pastRes.events  || []),
+    ...(nextRes.events  || []),
+    ...(day1Res.events  || []),
+    ...(day2Res.events  || []),
+  ];
 
   // Deduplicate
   const seen = new Set();
@@ -753,7 +772,8 @@ function renderAll() {
       } else if (m.status === 'ht') {
         statusHtml = `<span class="st-badge st-ht">HT</span>`;
       } else if (m.status === 'ft') {
-        statusHtml = `<span class="st-badge st-ft">FT</span>`;
+        const dateLabel = relativeDate(m.date);
+        statusHtml = `<span class="st-badge st-ft">FT${dateLabel ? ' · ' + dateLabel : ''}</span>`;
       } else {
         const display = m.time
           ? m.time
@@ -775,6 +795,18 @@ function renderAll() {
   }
 
   document.getElementById('main-content').innerHTML = html;
+}
+
+function relativeDate(dateStr) {
+  if (!dateStr) return '';
+  const today = new Date(); today.setHours(0,0,0,0);
+  const d = new Date(dateStr + 'T00:00:00');
+  const diff = Math.round((today - d) / 86400000);
+  if (diff === 0) return 'Today';
+  if (diff === 1) return 'Yesterday';
+  if (diff === 2) return '2d ago';
+  if (diff > 2 && diff <= 7) return diff + 'd ago';
+  return dateStr.substring(5).replace('-', '/');
 }
 
 function escHtml(s) {
