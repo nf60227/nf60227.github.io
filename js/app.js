@@ -243,36 +243,35 @@
     if (e.key === 'ArrowRight' && currentIndex < galleryItems.length - 1) openLightboxAt(currentIndex + 1);
   });
 
-  // ─── Broken image handler with retry ───
+  // ─── Broken image handler with retry fallback ───
   document.addEventListener('error', function(e) {
     if (e.target.tagName !== 'IMG') return;
-    const img = e.target;
-    const src = img.src;
-    const retry = parseInt(img.dataset.retry || '0', 10);
+    var img = e.target;
+    var src = img.src;
+    var retry = parseInt(img.dataset.retry || '0', 10);
 
     // Extract filename from current URL
-    let filename = '';
-    if (src.includes('Special:FilePath/')) {
-      filename = decodeURIComponent(src.split('Special:FilePath/')[1].split('?')[0]);
-    } else if (src.includes('thumb.php')) {
-      const m = src.match(/[?&]f=([^&]+)/);
+    var filename = '';
+    if (src.indexOf('upload.wikimedia.org') !== -1) {
+      var m = src.match(/\/([^/]+)\/\d+px-/);
       if (m) filename = decodeURIComponent(m[1]);
+    } else if (src.indexOf('Special:FilePath/') !== -1) {
+      filename = decodeURIComponent(src.split('Special:FilePath/')[1].split('?')[0]);
+    } else if (src.indexOf('thumb.php') !== -1) {
+      var tm = src.match(/[?&]f=([^&]+)/);
+      if (tm) filename = decodeURIComponent(tm[1]);
     }
 
     if (!filename) { img.dataset.failed = '1'; return; }
 
     if (retry === 0) {
-      // Try without width param (full-size)
+      // First retry: try Special:FilePath with width
       img.dataset.retry = '1';
-      img.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(filename);
+      img.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(filename) + '?width=800';
     } else if (retry === 1) {
-      // Try thumb.php endpoint
+      // Second retry: try without width param (full-size)
       img.dataset.retry = '2';
-      img.src = 'https://commons.wikimedia.org/w/thumb.php?f=' + encodeURIComponent(filename) + '&w=800';
-    } else if (retry === 2) {
-      // Try with underscores instead of spaces
-      img.dataset.retry = '3';
-      img.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(filename.replace(/ /g, '_'));
+      img.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(filename);
     } else {
       // All retries exhausted
       img.dataset.failed = '1';
