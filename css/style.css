@@ -1,0 +1,659 @@
+/* ============================================
+   Impressionism: A Global Survey
+   JSTOR-inspired academic design
+   ============================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-serif: 'Source Serif 4', 'Georgia', 'Times New Roman', serif;
+  --font-sans: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+
+  --color-bg: #faf9f6;
+  --color-surface: #ffffff;
+  --color-sidebar-bg: #1a1a2e;
+  --color-sidebar-text: #d4d4d8;
+  --color-sidebar-hover: #e4e4e7;
+  --color-sidebar-active: #ffffff;
+  --color-accent: #2c5f8a;
+  --color-accent-hover: #1d4567;
+  --color-text: #2d2d2d;
+  --color-text-secondary: #5a5a5a;
+  --color-border: #d4d0c8;
+  --color-border-light: #e8e5de;
+
+  --sidebar-width: 280px;
+  --content-max-width: 900px;
+  --transition: 0.25s ease;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-serif);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.7;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  width: var(--sidebar-width);
+  min-height: 100vh;
+  background: var(--color-sidebar-bg);
+  color: var(--color-sidebar-text);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  transition: transform var(--transition);
+}
+
+.sidebar-header {
+  padding: 2rem 1.5rem 1.25rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.site-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+.site-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.45);
+  margin-top: 0.25rem;
+}
+
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 200;
+  background: var(--color-sidebar-bg);
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 1px;
+  transition: var(--transition);
+}
+
+/* Nav */
+.nav-list {
+  list-style: none;
+  padding: 0.75rem 0;
+  flex: 1;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.45rem 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--color-sidebar-text);
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition);
+  border-left: 3px solid transparent;
+}
+
+.nav-link:hover {
+  color: var(--color-sidebar-hover);
+  background: rgba(255,255,255,0.04);
+}
+
+.nav-link.active {
+  color: var(--color-sidebar-active);
+  background: rgba(255,255,255,0.07);
+  border-left-color: var(--color-accent);
+  font-weight: 500;
+}
+
+.nav-group-toggle {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.4);
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: color var(--transition);
+  margin-top: 0.5rem;
+}
+
+.nav-group-toggle:hover {
+  color: rgba(255,255,255,0.65);
+}
+
+.nav-group-toggle::before {
+  content: '▸';
+  display: inline-block;
+  margin-right: 0.4rem;
+  transition: transform var(--transition);
+  font-size: 0.65rem;
+}
+
+.nav-group.open > .nav-group-toggle::before {
+  transform: rotate(90deg);
+}
+
+.nav-sublist {
+  list-style: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.nav-group.open > .nav-sublist {
+  max-height: 600px;
+}
+
+.nav-sublist .nav-link {
+  padding-left: 2.25rem;
+  font-size: 0.82rem;
+}
+
+.artist-country {
+  font-size: 0.65rem;
+  opacity: 0.5;
+  margin-left: 0.25rem;
+}
+
+.sidebar-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.25);
+  line-height: 1.5;
+}
+
+/* --- Main Content --- */
+.main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+}
+
+.content-container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 3rem 2.5rem 4rem;
+}
+
+/* --- Typography --- */
+.page-title {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.page-meta {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.subsection-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1.02rem;
+}
+
+blockquote {
+  border-left: 3px solid var(--color-accent);
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem;
+  font-style: italic;
+  color: var(--color-text-secondary);
+  background: rgba(44, 95, 138, 0.03);
+}
+
+/* --- Buttons (JSTOR style) --- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition);
+  letter-spacing: 0.01em;
+}
+
+.btn:hover {
+  background: #f0efe9;
+  border-color: #b0ada4;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+.btn-sm {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.85rem;
+}
+
+/* --- Cards / Artist overview grid --- */
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.artist-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.artist-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.artist-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  background: #e8e5de;
+}
+
+.artist-card-body {
+  padding: 0.85rem 1rem;
+}
+
+.artist-card-name {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.artist-card-info {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+/* --- Gallery grid --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.gallery-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow var(--transition);
+}
+
+.gallery-item:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  background: #e8e5de;
+}
+
+.gallery-caption {
+  padding: 0.7rem 0.85rem;
+}
+
+.gallery-title {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.gallery-date {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.15rem;
+}
+
+/* --- Artist detail header --- */
+.artist-header {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.artist-portrait {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+  background: #e8e5de;
+}
+
+.artist-bio h1 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.artist-bio .artist-dates {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.artist-bio .artist-nationality {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+/* --- Tag / Pill --- */
+.tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+  background: rgba(44, 95, 138, 0.08);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+/* --- Lightbox --- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity var(--transition);
+}
+
+.lightbox-close:hover {
+  opacity: 1;
+}
+
+.lightbox-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  text-align: center;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+.lightbox-caption {
+  color: rgba(255,255,255,0.7);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+/* --- Home hero --- */
+.home-hero {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.home-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.55), transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.home-hero-overlay h2 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.home-hero-overlay p {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 0;
+}
+
+/* --- Divider --- */
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-border-light);
+  margin: 2.5rem 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-toggle {
+    display: flex;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .content-container {
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  .artist-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .artist-portrait {
+    width: 140px;
+    height: 170px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 1.65rem;
+  }
+
+  .home-hero {
+    height: 220px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .artist-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Overlay for mobile sidebar */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 90;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition), visibility var(--transition);
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Scroll styling for sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 2px;
+}
+
+/* Fade-in animation for content */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.content-container > * {
+  animation: fadeIn 0.4s ease forwards;
+}
