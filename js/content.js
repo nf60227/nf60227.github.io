@@ -3,10 +3,15 @@
 // All images: Wikimedia Commons (public domain)
 // ============================================
 
-// Use Special:FilePath for reliable redirects — no hash path needed
+// Build Wikimedia Commons thumbnail URL via thumb.php (more reliable than Special:FilePath)
 function wikiImg(filename, width) {
   const w = width || 800;
-  return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(filename)}?width=${w}`;
+  return `https://commons.wikimedia.org/w/thumb.php?f=${encodeURIComponent(filename)}&w=${w}`;
+}
+
+// Fallback URL without thumbnail (full-size via Special:FilePath)
+function wikiImgFallback(filename) {
+  return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(filename)}`;
 }
 
 const CONTENT = {
