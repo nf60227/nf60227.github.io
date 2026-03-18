@@ -181,9 +181,13 @@ const CONTENT = {
       { title: 'Impression, Sunrise', date: '1872', img: wikiImg('Claude Monet, Impression, soleil levant.jpg') },
       { title: 'Water Lilies (Chicago)', date: '1906', img: wikiImg('Claude Monet - Water Lilies - 1906, Chicago.jpg') },
       { title: 'Woman with a Parasol', date: '1875', img: wikiImg('Claude Monet - Woman with a Parasol - Madame Monet and Her Son - Google Art Project.jpg') },
-      { title: 'The Japanese Footbridge', date: '1899', img: wikiImg('Water Lilies and Japanese Bridge (1899) by Claude Monet - Google Art Project.jpg') },
-      { title: 'Rouen Cathedral (Sunlight)', date: '1894', img: wikiImg('Claude Monet - Rouen Cathedral, Facade (Sunset).jpg') },
-      { title: 'San Giorgio Maggiore at Dusk', date: '1908', img: wikiImg('Claude Monet - San Giorgio Maggiore at Dusk.jpg') },
+      { title: 'The Japanese Footbridge', date: '1899', img: wikiImg('Claude Monet - Water Lilies and Japanese Bridge.jpg') },
+      { title: 'Rouen Cathedral (Sunlight)', date: '1894', img: wikiImg('Claude Monet - Rouen Cathedral, Facade (Sunset).JPG') },
+      { title: 'San Giorgio Maggiore at Dusk', date: '1908', img: wikiImg('Claude Monet, Saint-Georges majeur au crépuscule.jpg') },
+      { title: 'The Thames below Westminster', date: '1871', img: wikiImg('Claude Monet - The Thames below Westminster.jpg') },
+      { title: 'Haystacks (End of Summer)', date: '1891', img: wikiImg('Claude Monet - Meules - Google Art Project.jpg') },
+      { title: 'Poplars on the Epte', date: '1891', img: wikiImg('Claude Monet - Poplars on the Epte - Google Art Project.jpg') },
+      { title: 'The Magpie', date: '1869', img: wikiImg('Claude Monet - The Magpie - Google Art Project.jpg') },
     ]
   },
 
@@ -191,7 +195,7 @@ const CONTENT = {
     title: 'Pierre-Auguste Renoir',
     dates: '1841–1919',
     nationality: 'French',
-    portrait: wikiImg('Pierre-Auguste Renoir Photo.jpg'),
+    portrait: wikiImg('Pierre-Auguste Renoir - Autoportrait 5.JPG'),
     bio: `Renoir was the most sensuous of the Impressionists, celebrated for his luminous, warm palette and
     his joyful depictions of Parisian social life. A porcelain painter in his youth, he brought a craftsman's
     feel for surface and decoration to his work. In the 1880s he went through a "dry" or "Ingres" period,
@@ -204,6 +208,9 @@ const CONTENT = {
       { title: 'La Grenouillère', date: '1869', img: wikiImg('Auguste Renoir - La Grenouillère - Google Art Project.jpg') },
       { title: 'Girl with a Watering Can', date: '1876', img: wikiImg('Auguste Renoir - A Girl with a Watering Can - Google Art Project.jpg') },
       { title: 'Dance at Bougival', date: '1883', img: wikiImg('Pierre-Auguste Renoir - Suzanne Valadon - Dance at Bougival.jpg') },
+      { title: 'Two Sisters (On the Terrace)', date: '1881', img: wikiImg('Pierre-Auguste Renoir - Two Sisters (On the Terrace) - Google Art Project.jpg') },
+      { title: 'The Swing', date: '1876', img: wikiImg('Pierre-Auguste Renoir - The Swing - Google Art Project.jpg') },
+      { title: 'By the Seashore', date: '1883', img: wikiImg('Pierre-Auguste Renoir - By the Seashore - Google Art Project.jpg') },
     ]
   },
 
@@ -224,6 +231,9 @@ const CONTENT = {
       { title: 'The Star (L\'Étoile)', date: '1878', img: wikiImg('Edgar Degas - L\'Étoile.jpg') },
       { title: 'Blue Dancers', date: 'c. 1899', img: wikiImg('Edgar Degas - Blue Dancers - Google Art Project.jpg') },
       { title: 'The Dance Foyer at the Opera', date: '1872', img: wikiImg('Edgar Degas - The Dance Foyer at the Opera on the rue Le Peletier - Google Art Project.jpg') },
+      { title: 'At the Races', date: '1877–80', img: wikiImg('Edgar Degas - At the Races - Google Art Project.jpg') },
+      { title: 'The Tub', date: '1886', img: wikiImg('Edgar Degas - The Tub - Google Art Project.jpg') },
+      { title: 'Cotton Exchange, New Orleans', date: '1873', img: wikiImg('Edgar Degas - A Cotton Office in New Orleans - Google Art Project.jpg') },
     ]
   },
 
@@ -231,7 +241,7 @@ const CONTENT = {
     title: 'Berthe Morisot',
     dates: '1841–1895',
     nationality: 'French',
-    portrait: wikiImg('Berthe Morisot, Edouard Manet, Berthe Morisot au bouquet de violettes.jpg'),
+    portrait: wikiImg('Edouard Manet - Berthe Morisot With a Bouquet of Violets - Google Art Project.jpg'),
     bio: `Berthe Morisot was one of the founding members of the Impressionist group and participated in
     seven of the eight exhibitions. Encouraged by Corot and later influenced by her brother-in-law Édouard
     Manet, she developed a distinctive style marked by loose, feathery brushwork and a delicate palette of
@@ -243,6 +253,8 @@ const CONTENT = {
       { title: 'Summer\'s Day', date: '1879', img: wikiImg('Berthe Morisot - Jour d\'été - Musée d\'arts de Nantes.jpg') },
       { title: 'Woman at Her Toilette', date: 'c. 1875–80', img: wikiImg('Berthe Morisot - Woman at Her Toilette - Google Art Project.jpg') },
       { title: 'In the Garden at Maurecourt', date: '1884', img: wikiImg('Berthe Morisot - In the Garden at Maurecourt.jpg') },
+      { title: 'The Butterfly Hunt', date: '1874', img: wikiImg('Berthe Morisot - The Butterfly Hunt - Google Art Project.jpg') },
+      { title: 'Young Girl by the Window', date: '1878', img: wikiImg('Berthe Morisot - Young Girl by the Window - Google Art Project.jpg') },
     ]
   },
 
@@ -250,7 +262,7 @@ const CONTENT = {
     title: 'Camille Pissarro',
     dates: '1830–1903',
     nationality: 'French (born Danish West Indies)',
-    portrait: wikiImg('Camille Pissarro, by Robert Delaunay.jpg'),
+    portrait: wikiImg('Camille pissarro, autoritratto, 1873.JPG'),
     bio: `The eldest of the Impressionists, Pissarro was the only artist to participate in all eight
     independent exhibitions and served as a mentor and unifying figure for the group. Born in the Danish
     West Indies (now the U.S. Virgin Islands), he brought a broad, cosmopolitan perspective to French
@@ -260,8 +272,11 @@ const CONTENT = {
     works: [
       { title: 'Boulevard Montmartre at Night', date: '1897', img: wikiImg('Camille Pissarro - The Boulevard Montmartre at Night - Google Art Project.jpg') },
       { title: 'The Harvest, Pontoise', date: '1881', img: wikiImg('Camille Pissarro - La Récolte, Pontoise - Google Art Project.jpg') },
-      { title: 'The Boulevard Montmartre on a Winter Morning', date: '1897', img: wikiImg('Camille Pissarro - Boulevard Montmartre - Matin, Temps Gris - Google Art Project.jpg') },
+      { title: 'The Boulevard Montmartre, Winter Morning', date: '1897', img: wikiImg('The Boulevard Montmartre on a Winter Morning.JPG') },
       { title: 'Avenue de l\'Opéra, Sunshine', date: '1898', img: wikiImg('Camille Pissarro - Avenue de l\'Opéra - Sunshine, Winter Morning - Google Art Project.jpg') },
+      { title: 'Red Roofs', date: '1877', img: wikiImg('Camille Pissarro - Lordship Lane Station - Google Art Project.jpg') },
+      { title: 'The Côte des Bœufs at L\'Hermitage', date: '1877', img: wikiImg('Camille Pissarro - La Côte des Bœufs à l\'Hermitage - Google Art Project.jpg') },
+      { title: 'The Garden of the Tuileries on a Winter Afternoon', date: '1899', img: wikiImg('Camille Pissarro - The Garden of the Tuileries on a Winter Afternoon - Google Art Project.jpg') },
     ]
   },
 
@@ -281,6 +296,8 @@ const CONTENT = {
       { title: 'Bridge at Villeneuve-la-Garenne', date: '1872', img: wikiImg('Alfred Sisley - The Bridge at Villeneuve-la-Garenne - Google Art Project.jpg') },
       { title: 'Snow at Louveciennes', date: '1878', img: wikiImg('Alfred Sisley - Snow at Louveciennes - Google Art Project.jpg') },
       { title: 'The Lane of Poplars at Moret', date: '1890', img: wikiImg('Alfred Sisley 044.jpg') },
+      { title: 'Molesey Weir, Hampton Court', date: '1874', img: wikiImg('Alfred Sisley - Molesey Weir, Hampton Court - Google Art Project.jpg') },
+      { title: 'The Terrace at Saint-Germain', date: '1875', img: wikiImg('Alfred Sisley - The Terrace at Saint-Germain, Spring - Google Art Project.jpg') },
     ]
   },
 
@@ -300,6 +317,8 @@ const CONTENT = {
       { title: 'The Floor Scrapers', date: '1875', img: wikiImg('Gustave Caillebotte - The Floor Planers - Google Art Project.jpg') },
       { title: 'Man at His Bath', date: '1884', img: wikiImg('Gustave Caillebotte - Homme au bain.jpg') },
       { title: 'Le pont de l\'Europe', date: '1876', img: wikiImg('G. Caillebotte - Le pont de l\'Europe.jpg') },
+      { title: 'Oarsmen on the Yerres', date: '1877', img: wikiImg('Gustave Caillebotte - Périssoires sur l\'Yerres - Google Art Project.jpg') },
+      { title: 'Young Man at His Window', date: '1876', img: wikiImg('Gustave Caillebotte - Young Man at His Window - Google Art Project.jpg') },
     ]
   },
 
@@ -322,6 +341,9 @@ const CONTENT = {
       { title: 'The Boating Party', date: '1893–94', img: wikiImg('Mary Cassatt - The Boating Party - Google Art Project.jpg') },
       { title: 'Summertime', date: 'c. 1894', img: wikiImg('Mary Cassatt - Summertime - Google Art Project.jpg') },
       { title: 'Young Mother Sewing', date: '1900', img: wikiImg('Cassatt Mary Young Mother Sewing 1900.jpg') },
+      { title: 'In the Loge', date: '1878', img: wikiImg('Mary Cassatt - In the Loge - Google Art Project.jpg') },
+      { title: 'The Letter', date: '1891', img: wikiImg('Mary Cassatt - The Letter - Google Art Project.jpg') },
+      { title: 'Mother and Child', date: '1905', img: wikiImg('Mary Cassatt - Mother and Child - Google Art Project.jpg') },
     ]
   },
 
@@ -329,7 +351,7 @@ const CONTENT = {
     title: 'Childe Hassam',
     dates: '1859–1935',
     nationality: 'American',
-    portrait: wikiImg('Childe Hassam 1914.jpg'),
+    portrait: wikiImg('Childe Hassam - Washington Arch, Spring - Google Art Project.jpg'),
     bio: `Frederick Childe Hassam was the leading figure of American Impressionism. After studying in
     Paris from 1886 to 1889, he returned to the United States and became a founding member of the "Ten
     American Painters," a group that seceded from the Society of American Artists to exhibit impressionist
@@ -339,8 +361,10 @@ const CONTENT = {
     works: [
       { title: 'Allies Day, May 1917', date: '1917', img: wikiImg('Hassam - Allies Day, May 1917.jpg') },
       { title: 'The Room of Flowers', date: '1894', img: wikiImg('Childe Hassam - The Room of Flowers.jpg') },
-      { title: 'Boston Common at Twilight', date: '1885–86', img: wikiImg('Childe Hassam - Boston Common at Twilight - Google Art Project.jpg') },
-      { title: 'Celia Thaxter\'s Garden', date: '1892', img: wikiImg('Childe Hassam - Celia Thaxter\'s Garden, Isles of Shoals, Maine - Google Art Project.jpg') },
+      { title: 'Boston Common at Twilight', date: '1885–86', img: wikiImg('Childe Hassam, \'Boston Common at Twilight\', 1885–86.jpg') },
+      { title: 'Celia Thaxter\'s Garden', date: '1892', img: wikiImg('Celia Thaxter in Her Garden by Childe Hassam.JPG') },
+      { title: 'Washington Arch, Spring', date: '1890', img: wikiImg('Childe Hassam - Washington Arch, Spring - Google Art Project.jpg') },
+      { title: 'Champs Élysées, Paris', date: '1889', img: wikiImg('Childe Hassam - Champs Elysées, Paris.JPG') },
     ]
   },
 
@@ -348,7 +372,7 @@ const CONTENT = {
     title: 'Theodore Robinson',
     dates: '1852–1896',
     nationality: 'American',
-    portrait: wikiImg('Theodore Robinson photo.jpg'),
+    portrait: wikiImg('Theodore Robinson - The Wedding March.jpg'),
     bio: `Theodore Robinson was one of the first American painters to adopt Impressionism after befriending
     Claude Monet at Giverny in the late 1880s. His work blends impressionist light and color with a
     structured, tonal approach that reflects his American training. Robinson spent several summers at
@@ -358,7 +382,9 @@ const CONTENT = {
     works: [
       { title: 'The Wedding March', date: '1892', img: wikiImg('Theodore Robinson - The Wedding March.jpg') },
       { title: 'Port Ben, Delaware and Hudson Canal', date: '1893', img: wikiImg('Theodore Robinson - Port Ben, Delaware and Hudson Canal - Google Art Project.jpg') },
-      { title: 'A Bird\'s-Eye View', date: '1889', img: wikiImg('Theodore Robinson - Bird\'s Eye View- Giverny - Google Art Project.jpg') },
+      { title: 'A Bird\'s-Eye View', date: '1889', img: wikiImg('Robinson A Bird\'s-Eye View.jpg') },
+      { title: 'In the Orchard', date: '1891', img: wikiImg('Theodore Robinson - In the Orchard - Google Art Project.jpg') },
+      { title: 'La Vachère', date: '1888', img: wikiImg('Theodore Robinson - La Vachère - Google Art Project.jpg') },
     ]
   },
 
@@ -366,7 +392,7 @@ const CONTENT = {
     title: 'John Henry Twachtman',
     dates: '1853–1902',
     nationality: 'American',
-    portrait: wikiImg('John Henry Twachtman.jpg'),
+    portrait: wikiImg('John Henry Twachtman - Icebound - Google Art Project.jpg'),
     bio: `Twachtman was one of the most lyrical and experimental of the American Impressionists. Trained
     in Munich and later in Paris under the academic painter Jules Lefebvre, he evolved through several
     styles before arriving at a highly personal form of Impressionism characterized by subtle tonal
@@ -374,9 +400,11 @@ const CONTENT = {
     his property at Horseneck Falls in Greenwich, Connecticut — its brook, waterfall, garden, and
     surrounding woods in every season — are among the finest achievements of American Impressionism.`,
     works: [
-      { title: 'Horseneck Falls', date: 'c. 1889–1900', img: wikiImg('John Henry Twachtman - Horseneck Falls.jpg') },
+      { title: 'Horseneck Falls', date: 'c. 1889–1900', img: wikiImg('Horseneck Falls MET DP161232.jpg') },
       { title: 'Icebound', date: 'c. 1889', img: wikiImg('John Henry Twachtman - Icebound - Google Art Project.jpg') },
-      { title: 'Niagara Falls', date: 'c. 1894', img: wikiImg('Twachtman Niagara Falls.jpg') },
+      { title: 'Niagara Falls', date: 'c. 1894', img: wikiImg('John Henry Twachtman - Niagara Falls - 1929.6.142 - Smithsonian American Art Museum.jpg') },
+      { title: 'Niagara in Winter', date: 'c. 1893', img: wikiImg('Niagara in Winter by John Henry Twachtman, c. 1893, oil on canvas - New Britain Museum of American Art - DSC09580.JPG') },
+      { title: 'The White Bridge', date: 'c. 1900', img: wikiImg('John Henry Twachtman - The White Bridge - Google Art Project.jpg') },
     ]
   },
 
@@ -384,7 +412,7 @@ const CONTENT = {
     title: 'J. Alden Weir',
     dates: '1852–1919',
     nationality: 'American',
-    portrait: wikiImg('J. Alden Weir photograph.jpg'),
+    portrait: wikiImg('Self-portrait by J. Alden Weir, 1886, National Academy of Design.JPG'),
     bio: `Julian Alden Weir was a founding member of the Ten American Painters and one of the leading
     figures in bringing Impressionism to the United States. Initially resistant to the movement — he
     called the Third Impressionist Exhibition "worse than the Chamber of Horrors" after visiting Paris
@@ -395,6 +423,8 @@ const CONTENT = {
       { title: 'The Red Bridge', date: '1895', img: wikiImg('J. Alden Weir - The Red Bridge - Google Art Project.jpg') },
       { title: 'In the Sun', date: '1899', img: wikiImg('J. Alden Weir - In the Sun.jpg') },
       { title: 'The Factory Village', date: '1897', img: wikiImg('Julian Alden Weir - The Factory Village - Google Art Project.jpg') },
+      { title: 'Midday Rest in New England', date: '1897', img: wikiImg('Julian Alden Weir - Midday Rest in New England - Google Art Project.jpg') },
+      { title: 'The Ice Cutters', date: 'c. 1890', img: wikiImg('Julian Alden Weir - The Ice Cutters - Google Art Project.jpg') },
     ]
   },
 
@@ -404,7 +434,7 @@ const CONTENT = {
     title: 'Joaquín Sorolla',
     dates: '1863–1923',
     nationality: 'Spanish',
-    portrait: wikiImg('Joaquín Sorolla Photo.jpg'),
+    portrait: wikiImg('Joaquin Sorolla by Gertrude Käsebier, 1908.jpg'),
     bio: `Joaquín Sorolla y Bastida is Spain's greatest Impressionist and one of the most accomplished
     painters of light in the history of art. Born in Valencia, he studied in Rome and Paris before
     developing a luminous, large-scale plein air style that captured the intense Mediterranean light
@@ -418,6 +448,8 @@ const CONTENT = {
       { title: 'Sewing the Sail', date: '1896', img: wikiImg('Joaquín Sorolla y Bastida - Sewing the Sail - Google Art Project.jpg') },
       { title: 'The Horse\'s Bath', date: '1909', img: wikiImg('Joaquin Sorolla - El baño del caballo.jpg') },
       { title: 'My Wife and Daughters in the Garden', date: '1910', img: wikiImg('Joaquín Sorolla - My Wife and Daughters in the Garden, 1910 - Google Art Project.jpg') },
+      { title: 'Beach at Valencia', date: '1908', img: wikiImg('Joaquin Sorolla, 1908 - Beach of Valencia by Morning Light.jpg') },
+      { title: 'Children on the Beach', date: '1910', img: wikiImg('Joaquín Sorolla y Bastida - Children at the Beach (Javea) - Google Art Project.jpg') },
     ]
   },
 
@@ -435,7 +467,9 @@ const CONTENT = {
     works: [
       { title: 'Walchensee, Panorama', date: '1924', img: wikiImg('Lovis Corinth - Walchensee, Panorama - Google Art Project.jpg') },
       { title: 'Self-Portrait with Skeleton', date: '1896', img: wikiImg('Lovis Corinth Selbstporträt 1896.jpg') },
-      { title: 'Easter at Walchensee', date: '1922', img: wikiImg('Lovis Corinth BC 47.jpg') },
+      { title: 'Easter at Walchensee', date: '1922', img: wikiImg('Lovis Corinth Ostern am Walchensee 1922.jpg') },
+      { title: 'The Deposition', date: '1895', img: wikiImg('Lovis Corinth - Pieta - Google Art Project.jpg') },
+      { title: 'Slaughterhouse', date: '1893', img: wikiImg('Lovis Corinth - Schlachthaus - Google Art Project.jpg') },
     ]
   },
 
@@ -443,7 +477,7 @@ const CONTENT = {
     title: 'Igor Grabar',
     dates: '1871–1960',
     nationality: 'Russian',
-    portrait: wikiImg('Grabar portret.jpg'),
+    portrait: wikiImg('Grabar February azure 1904 gtg.jpg'),
     bio: `Igor Grabar was the leading Russian Impressionist and a towering figure in Russian cultural
     life as a painter, art historian, museum director, and restorer. After studying in Munich under
     Anton Ažbe, he brought impressionist and post-impressionist techniques to Russian landscape painting.
@@ -451,9 +485,10 @@ const CONTENT = {
     of the Russian countryside with a vibrancy that earned him comparison to Monet. He later directed
     the Tretyakov Gallery and led major art restoration campaigns across the Soviet Union.`,
     works: [
-      { title: 'February Azure', date: '1904', img: wikiImg('Grabar Febr Azure.jpg') },
-      { title: 'March Snow', date: '1904', img: wikiImg('Grabar March Snow.jpg') },
-      { title: 'Winter Morning', date: '1907', img: wikiImg('Grabar Winter Morning.jpg') },
+      { title: 'February Azure', date: '1904', img: wikiImg('Grabar February azure 1904 gtg.jpg') },
+      { title: 'March Snow', date: '1904', img: wikiImg('Snow in March by Igor Grabar, 1904.jpg') },
+      { title: 'The Frost', date: '1905', img: wikiImg('The Frost by Igor Grabar, 1905.jpg') },
+      { title: 'Untouched Snow', date: '1904', img: wikiImg('Grabar February azure study 1904 nhmrb.jpg') },
     ]
   },
 
@@ -472,6 +507,8 @@ const CONTENT = {
       { title: 'Summer Evening on Skagen\'s Beach', date: '1899', img: wikiImg('P.S. Krøyer - Summer evening on Skagen\'s Beach. Anna Ancher and Marie Krøyer walking together. - Google Art Project.jpg') },
       { title: 'Hip, Hip, Hurrah!', date: '1888', img: wikiImg('Peter Severin Krøyer - Hip Hip Hurrah! Artist Festival at Skagen - Google Art Project.jpg') },
       { title: 'Summer Evening at Skagen', date: '1892', img: wikiImg('Peder Severin Krøyer - Summer evening at Skagen. The artist\'s wife and dog by the shore - Google Art Project.jpg') },
+      { title: 'Fishermen on Skagen\'s Beach', date: '1883', img: wikiImg('Peder Severin Krøyer - Fishermen on Skagen\'s North Beach - Google Art Project.jpg') },
+      { title: 'Marie Krøyer on the Beach', date: '1893', img: wikiImg('P.S. Krøyer - Marie Krøyer painting on Skagen\'s Beach - Google Art Project.jpg') },
     ]
   },
 
@@ -491,6 +528,8 @@ const CONTENT = {
       { title: 'Golden Summer, Eaglemont', date: '1889', img: wikiImg('\'Golden Summer, Eaglemont\' by Arthur Streeton, 1889.jpg') },
       { title: 'Fire\'s On', date: '1891', img: wikiImg('Arthur Streeton - Fire\'s on - Google Art Project.jpg') },
       { title: 'Still Glides the Stream', date: '1890', img: wikiImg('Arthur Streeton - \'Still glides the stream, and shall for ever glide\' - Google Art Project.jpg') },
+      { title: 'The Purple Noon\'s Transparent Might', date: '1896', img: wikiImg('Arthur Streeton - The purple noon\'s transparent might - Google Art Project.jpg') },
+      { title: 'Near Heidelberg', date: '1890', img: wikiImg('Arthur Streeton - Near Heidelberg - Google Art Project.jpg') },
     ]
   },
 };

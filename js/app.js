@@ -12,6 +12,11 @@
   const lightboxImg = document.getElementById('lightbox-img');
   const lightboxCaption = document.getElementById('lightbox-caption');
   const lightboxClose = document.getElementById('lightbox-close');
+  const lightboxPrev = document.getElementById('lightbox-prev');
+  const lightboxNext = document.getElementById('lightbox-next');
+
+  let galleryItems = [];
+  let currentIndex = 0;
 
   // Create overlay for mobile
   const overlay = document.createElement('div');
@@ -198,19 +203,21 @@
 
   // ─── Gallery lightbox ───
   function attachGalleryListeners() {
-    container.querySelectorAll('.gallery-item').forEach(item => {
-      item.addEventListener('click', () => {
-        const img = item.dataset.img;
-        const caption = item.dataset.caption;
-        openLightbox(img, caption);
-      });
+    const items = Array.from(container.querySelectorAll('.gallery-item'));
+    galleryItems = items;
+    items.forEach((item, idx) => {
+      item.addEventListener('click', () => openLightboxAt(idx));
     });
   }
 
-  function openLightbox(src, caption) {
-    lightboxImg.src = src;
-    lightboxImg.alt = caption;
-    lightboxCaption.textContent = caption;
+  function openLightboxAt(idx) {
+    currentIndex = idx;
+    const item = galleryItems[idx];
+    lightboxImg.src = item.dataset.img;
+    lightboxImg.alt = item.dataset.caption;
+    lightboxCaption.textContent = item.dataset.caption;
+    lightboxPrev.disabled = idx === 0;
+    lightboxNext.disabled = idx === galleryItems.length - 1;
     lightbox.classList.add('active');
     lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -224,11 +231,16 @@
   }
 
   lightboxClose.addEventListener('click', closeLightbox);
+  lightboxPrev.addEventListener('click', e => { e.stopPropagation(); if (currentIndex > 0) openLightboxAt(currentIndex - 1); });
+  lightboxNext.addEventListener('click', e => { e.stopPropagation(); if (currentIndex < galleryItems.length - 1) openLightboxAt(currentIndex + 1); });
   lightbox.addEventListener('click', e => {
     if (e.target === lightbox) closeLightbox();
   });
   document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('active')) return;
     if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft' && currentIndex > 0) openLightboxAt(currentIndex - 1);
+    if (e.key === 'ArrowRight' && currentIndex < galleryItems.length - 1) openLightboxAt(currentIndex + 1);
   });
 
   // ─── Broken image handler ───
