@@ -243,13 +243,25 @@
     if (e.key === 'ArrowRight' && currentIndex < galleryItems.length - 1) openLightboxAt(currentIndex + 1);
   });
 
-  // ─── Broken image handler ───
+  // ─── Broken image handler with retry fallback ───
   document.addEventListener('error', function(e) {
-    if (e.target.tagName === 'IMG' && !e.target.dataset.failed) {
-      e.target.dataset.failed = '1';
-      e.target.style.background = '#e8e5de';
-      e.target.style.display = 'flex';
-      e.target.alt = e.target.alt || 'Image unavailable';
+    if (e.target.tagName !== 'IMG') return;
+    var img = e.target;
+    // First failure on upload.wikimedia.org: retry via Special:FilePath redirect
+    if (!img.dataset.retried && img.src.indexOf('upload.wikimedia.org') !== -1) {
+      img.dataset.retried = '1';
+      var m = img.src.match(/\/([^/]+)\/\d+px-/);
+      if (m) {
+        img.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + m[1] + '?width=800';
+        return;
+      }
+    }
+    // Final failure: show placeholder
+    if (!img.dataset.failed) {
+      img.dataset.failed = '1';
+      img.style.background = '#e8e5de';
+      img.style.display = 'flex';
+      img.alt = img.alt || 'Image unavailable';
     }
   }, true);
 
