@@ -247,20 +247,34 @@
   document.addEventListener('error', function(e) {
     if (e.target.tagName !== 'IMG') return;
     var img = e.target;
-    // First failure on upload.wikimedia.org: retry via Special:FilePath redirect
-    if (!img.dataset.retried && img.src.indexOf('upload.wikimedia.org') !== -1) {
-      img.dataset.retried = '1';
-      var m = img.src.match(/\/([^/]+)\/\d+px-/);
-      if (m) {
-        img.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + m[1] + '?width=800';
-        return;
-      }
+    var src = img.src;
+    var retry = parseInt(img.dataset.retry || '0', 10);
+
+    // Extract filename from current URL
+    var filename = '';
+    if (src.indexOf('upload.wikimedia.org') !== -1) {
+      var m = src.match(/\/([^/]+)\/\d+px-/);
+      if (m) filename = decodeURIComponent(m[1]);
+    } else if (src.indexOf('Special:FilePath/') !== -1) {
+      filename = decodeURIComponent(src.split('Special:FilePath/')[1].split('?')[0]);
+    } else if (src.indexOf('thumb.php') !== -1) {
+      var tm = src.match(/[?&]f=([^&]+)/);
+      if (tm) filename = decodeURIComponent(tm[1]);
     }
-    // Final failure: show placeholder
-    if (!img.dataset.failed) {
+
+    if (!filename) { img.dataset.failed = '1'; return; }
+
+    if (retry === 0) {
+      // First retry: try Special:FilePath with width
+      img.dataset.retry = '1';
+      img.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(filename) + '?width=800';
+    } else if (retry === 1) {
+      // Second retry: try without width param (full-size)
+      img.dataset.retry = '2';
+      img.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(filename);
+    } else {
+      // All retries exhausted
       img.dataset.failed = '1';
-      img.style.background = '#e8e5de';
-      img.style.display = 'flex';
       img.alt = img.alt || 'Image unavailable';
     }
   }, true);
