@@ -231,6 +231,16 @@
     if (e.key === 'Escape') closeLightbox();
   });
 
+  // ─── Broken image handler ───
+  document.addEventListener('error', function(e) {
+    if (e.target.tagName === 'IMG' && !e.target.dataset.failed) {
+      e.target.dataset.failed = '1';
+      e.target.style.background = '#e8e5de';
+      e.target.style.display = 'flex';
+      e.target.alt = e.target.alt || 'Image unavailable';
+    }
+  }, true);
+
   // ─── Init ───
   // Open all nav groups by default
   document.querySelectorAll('.nav-group').forEach(g => g.classList.add('open'));
