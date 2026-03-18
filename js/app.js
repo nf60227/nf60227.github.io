@@ -248,32 +248,34 @@
     if (e.target.tagName !== 'IMG') return;
     const img = e.target;
     const src = img.src;
+    const retry = parseInt(img.dataset.retry || '0', 10);
 
-    // Retry 1: if using thumb.php, try Special:FilePath fallback
-    if (!img.dataset.retry && src.includes('/w/thumb.php')) {
+    // Extract filename from current URL
+    let filename = '';
+    if (src.includes('Special:FilePath/')) {
+      filename = decodeURIComponent(src.split('Special:FilePath/')[1].split('?')[0]);
+    } else if (src.includes('thumb.php')) {
+      const m = src.match(/[?&]f=([^&]+)/);
+      if (m) filename = decodeURIComponent(m[1]);
+    }
+
+    if (!filename) { img.dataset.failed = '1'; return; }
+
+    if (retry === 0) {
+      // Try without width param (full-size)
       img.dataset.retry = '1';
-      const match = src.match(/[?&]f=([^&]+)/);
-      if (match) {
-        const filename = decodeURIComponent(match[1]);
-        img.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(filename);
-        return;
-      }
-    }
-
-    // Retry 2: if Special:FilePath failed, try without encoding spaces as %20
-    if (img.dataset.retry === '1' && src.includes('Special:FilePath')) {
+      img.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(filename);
+    } else if (retry === 1) {
+      // Try thumb.php endpoint
       img.dataset.retry = '2';
-      const filename = src.split('Special:FilePath/')[1];
-      if (filename) {
-        img.src = 'https://commons.wikimedia.org/w/thumb.php?f=' + filename + '&w=800';
-        return;
-      }
-    }
-
-    // All retries exhausted — show placeholder
-    if (!img.dataset.failed) {
+      img.src = 'https://commons.wikimedia.org/w/thumb.php?f=' + encodeURIComponent(filename) + '&w=800';
+    } else if (retry === 2) {
+      // Try with underscores instead of spaces
+      img.dataset.retry = '3';
+      img.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(filename.replace(/ /g, '_'));
+    } else {
+      // All retries exhausted
       img.dataset.failed = '1';
-      img.style.background = '#e8e5de';
       img.alt = img.alt || 'Image unavailable';
     }
   }, true);
