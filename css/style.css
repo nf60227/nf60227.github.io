@@ -20,8 +20,8 @@
   --color-sidebar-text: #d4d4d8;
   --color-sidebar-hover: #e4e4e7;
   --color-sidebar-active: #ffffff;
-  --color-accent: #2c5f8a;
-  --color-accent-hover: #1d4567;
+  --color-accent: #990000;
+  --color-accent-hover: #7a0000;
   --color-text: #2d2d2d;
   --color-text-secondary: #5a5a5a;
   --color-border: #d4d0c8;
@@ -267,7 +267,7 @@ blockquote {
   padding: 0.75rem 1.25rem;
   font-style: italic;
   color: var(--color-text-secondary);
-  background: rgba(44, 95, 138, 0.03);
+  background: rgba(153, 0, 0, 0.03);
 }
 
 /* --- Buttons (JSTOR style) --- */
@@ -453,7 +453,7 @@ blockquote {
   font-weight: 500;
   padding: 0.2rem 0.6rem;
   border-radius: 2px;
-  background: rgba(44, 95, 138, 0.08);
+  background: rgba(153, 0, 0, 0.08);
   color: var(--color-accent);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -504,7 +504,7 @@ blockquote {
 
 .lightbox-close:hover {
   opacity: 1;
-  background: rgba(44, 95, 138, 0.6);
+  background: rgba(153, 0, 0, 0.5);
   border-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -540,7 +540,7 @@ blockquote {
 .lightbox-prev:hover,
 .lightbox-next:hover {
   opacity: 1;
-  background: rgba(44, 95, 138, 0.6);
+  background: rgba(153, 0, 0, 0.5);
   border-color: rgba(255, 255, 255, 0.3);
 }
 
