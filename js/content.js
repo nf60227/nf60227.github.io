@@ -167,11 +167,11 @@ const CONTENT = {
       { section: 'robinson', name: 'Theodore Robinson', info: '1852–1896 · Vermont', img: wikiImg('Theodore Robinson - The Wedding March.jpg') },
       { section: 'twachtman', name: 'John Henry Twachtman', info: '1853–1902 · Cincinnati', img: wikiImg('John Henry Twachtman - Icebound - Google Art Project.jpg') },
       { section: 'weir', name: 'J. Alden Weir', info: '1852–1919 · Connecticut', img: wikiImg('Julian Alden Weir - The Factory Village - Google Art Project.jpg') },
-      { section: 'chase', name: 'William Merritt Chase', info: '1849–1916 · Indiana', img: wikiImg('William Merritt Chase - A Friendly Call - Google Art Project.jpg') },
-      { section: 'tarbell', name: 'Edmund Tarbell', info: '1862–1938 · Massachusetts', img: wikiImg('Edmund C. Tarbell - Three Sisters - A Study in June Sunlight.jpg') },
-      { section: 'benson', name: 'Frank Weston Benson', info: '1862–1951 · Massachusetts', img: wikiImg('Frank W. Benson - Portrait in White - Google Art Project.jpg') },
-      { section: 'metcalf', name: 'Willard Metcalf', info: '1858–1925 · Maine', img: wikiImg('Willard Metcalf - May Night - Google Art Project.jpg') },
-      { section: 'reid', name: 'Robert Reid', info: '1862–1929 · Massachusetts', img: wikiImg('Robert Reid - Fleur-de-lis - Google Art Project.jpg') },
+      { section: 'chase', name: 'William Merritt Chase', info: '1849–1916 · Indiana', img: wikiImg('A Friendly Call.JPG') },
+      { section: 'tarbell', name: 'Edmund Tarbell', info: '1862–1938 · Massachusetts', img: wikiImg('Edmund C. Tarbell - New England Interior - 1985.66 - Museum of Fine Arts.jpg') },
+      { section: 'benson', name: 'Frank Weston Benson', info: '1862–1951 · Massachusetts', img: wikiImg('Portrait in White 1889 Frank Weston Benson.jpg') },
+      { section: 'metcalf', name: 'Willard Metcalf', info: '1858–1925 · Maine', img: wikiImg('Willard Metcalf May Night.png') },
+      { section: 'reid', name: 'Robert Reid', info: '1862–1929 · Massachusetts', img: wikiImg('Robert Lewis Reid - Fleur de Lis.jpg') },
     ]
   },
 
@@ -569,7 +569,7 @@ const CONTENT = {
     title: 'William Merritt Chase',
     dates: '1849–1916',
     nationality: 'American',
-    portrait: wikiImg('William Merritt Chase - A Friendly Call - Google Art Project.jpg'),
+    portrait: wikiImg('A Friendly Call.JPG'),
     bio: `William Merritt Chase was one of the most influential American painters of the Gilded Age and a
     tireless champion of modern art in the United States. Trained in Munich and New York, he established
     the Shinnecock Hills Summer School of Art on Long Island in 1891 — the first outdoor art school in
@@ -577,18 +577,11 @@ const CONTENT = {
     from bravura studio interiors to sun-flooded plein air landscapes, and his teaching shaped a generation
     of American modernists including Georgia O'Keeffe and Edward Hopper.`,
     works: [
-      { title: 'A Friendly Call', date: '1895', img: wikiImg('William Merritt Chase - A Friendly Call - Google Art Project.jpg') },
-      { title: 'At the Seaside', date: 'c. 1892', img: wikiImg('William Merritt Chase - At the Seaside.jpg') },
-      { title: 'The Nursery', date: 'c. 1890', img: wikiImg('William Merritt Chase - The Nursery - Google Art Project.jpg') },
-      { title: 'Idle Hours', date: 'c. 1894', img: wikiImg('William Merritt Chase - Idle Hours - Google Art Project.jpg') },
-      { title: 'Hall at Shinnecock', date: '1892', img: wikiImg('William Merritt Chase - Hall at Shinnecock - Google Art Project.jpg') },
-      { title: 'Walk on the Beach', date: '1909', img: wikiImg('Joaquín Sorolla y Bastida - Strolling along the Seashore - Google Art Project.jpg'), desc: 'Women in white strolling along the shore with wind-swept reflections in wet sand' },
-      { title: 'Boys on the Beach', date: '1910', img: wikiImg('Joaquín Sorolla y Bastida - Boys on the Beach - Google Art Project.jpg'), desc: 'Nude boys playing in the surf under blazing Mediterranean sunlight' },
-      { title: 'Sewing the Sail', date: '1896', img: wikiImg('Joaquín Sorolla y Bastida - Sewing the Sail - Google Art Project.jpg'), desc: 'Fishermen mending a massive white sail in the shade of a courtyard' },
-      { title: 'The Horse\'s Bath', date: '1909', img: wikiImg('Joaquin Sorolla - El baño del caballo.jpg'), desc: 'A horse being washed in the sea by its handler on a sunny beach' },
-      { title: 'My Wife and Daughters in the Garden', date: '1910', img: wikiImg('Joaquín Sorolla - My Wife and Daughters in the Garden, 1910 - Google Art Project.jpg'), desc: 'Sorolla\'s family relaxing in their lush Madrid garden' },
-      { title: 'Beach at Valencia', date: '1908', img: wikiImg('Joaquin Sorolla, 1908 - Beach of Valencia by Morning Light.jpg'), desc: 'Early morning light on the Valencian coast with fishing boats at rest' },
-      { title: 'Children on the Beach', date: '1910', img: wikiImg('Joaquín Sorolla y Bastida - Children at the Beach (Javea) - Google Art Project.jpg'), desc: 'Children splashing in shallow turquoise water at the beach in Javea' },
+      { title: 'A Friendly Call', date: '1895', img: wikiImg('A Friendly Call.JPG') },
+      { title: 'At the Seaside', date: 'c. 1892', img: wikiImg('At the Seaside MET DT95.jpg') },
+      { title: 'Hide and Seek', date: '1888', img: wikiImg('William Merritt Chase - Hide and Seek - Google Art Project.jpg') },
+      { title: 'Idle Hours', date: 'c. 1894', img: wikiImg('William Merritt Chase - Idle Hours (c. 1894).jpg') },
+      { title: 'The Open Air Breakfast', date: 'c. 1888', img: wikiImg('William Merritt Chase - The Open Air Breakfast - Google Art Project.jpg') },
     ]
   },
 
@@ -596,7 +589,7 @@ const CONTENT = {
     title: 'Edmund Tarbell',
     dates: '1862–1938',
     nationality: 'American',
-    portrait: wikiImg('Edmund C. Tarbell - Three Sisters - A Study in June Sunlight.jpg'),
+    portrait: wikiImg('Edmund C. Tarbell - New England Interior - 1985.66 - Museum of Fine Arts.jpg'),
     bio: `Edmund Tarbell was the central figure of the Boston School, a group of painters who extended
     Impressionism into intimate interior scenes of extraordinary refinement. Trained at the École des
     Beaux-Arts in Paris, he returned to Boston and taught at the School of the Museum of Fine Arts for
@@ -604,16 +597,11 @@ const CONTENT = {
     light of Impressionism with the old-master quietude of Vermeer — sunlit rooms, women reading or
     sewing, the play of light on white muslin and polished surfaces.`,
     works: [
-      { title: 'Three Sisters — A Study in June Sunlight', date: '1890', img: wikiImg('Edmund C. Tarbell - Three Sisters - A Study in June Sunlight.jpg') },
       { title: 'Across the Room', date: 'c. 1899', img: wikiImg('Edmund Charles Tarbell - Across the Room - Google Art Project.jpg') },
-      { title: 'Girl Crocheting', date: '1904', img: wikiImg('Edmund C. Tarbell - Girl Crocheting - Google Art Project.jpg') },
-      { title: 'New England Interior', date: '1906', img: wikiImg('Tarbell Edmund New England Interior 1906.jpg') },
-      { title: 'In the Orchard', date: '1891', img: wikiImg('Edmund C. Tarbell - In the Orchard - Google Art Project.jpg') },
-      { title: 'Walchensee, Panorama', date: '1924', img: wikiImg('Lovis Corinth - Walchensee, Panorama - Google Art Project.jpg'), desc: 'A sweeping view of the Bavarian alpine lake painted in bold, expressive strokes' },
-      { title: 'Self-Portrait with Skeleton', date: '1896', img: wikiImg('Lovis Corinth Selbstporträt 1896.jpg'), desc: 'The artist posing with a studio skeleton in a darkly humorous self-portrait' },
-      { title: 'Easter at Walchensee', date: '1922', img: wikiImg('Lovis Corinth Ostern am Walchensee 1922.jpg'), desc: 'The lake in spring with snow-capped mountains, painted after Corinth\'s stroke' },
-      { title: 'The Deposition', date: '1895', img: wikiImg('Lovis Corinth - Pieta - Google Art Project.jpg'), desc: 'Christ being lowered from the cross in a raw, emotionally charged composition' },
-      { title: 'Slaughterhouse', date: '1893', img: wikiImg('Lovis Corinth - Schlachthaus - Google Art Project.jpg'), desc: 'A confronting depiction of a butcher at work in an abattoir' },
+      { title: 'New England Interior', date: '1906', img: wikiImg('Edmund C. Tarbell - New England Interior - 1985.66 - Museum of Fine Arts.jpg') },
+      { title: 'Mercie Cutting Flowers', date: '1912', img: wikiImg('Edmund C. Tarbell - Mercie Cutting Flowers - Google Art Project.jpg') },
+      { title: 'Josephine and Mercie', date: '1908', img: wikiImg('Edmund C. Tarbell - Josephine and Mercie - Google Art Project.jpg') },
+      { title: 'My Family', date: '1914', img: wikiImg('Edmund C. Tarbell - My Family - Google Art Project.jpg') },
     ]
   },
 
@@ -621,7 +609,7 @@ const CONTENT = {
     title: 'Frank Weston Benson',
     dates: '1862–1951',
     nationality: 'American',
-    portrait: wikiImg('Frank W. Benson - Portrait in White - Google Art Project.jpg'),
+    portrait: wikiImg('Portrait in White 1889 Frank Weston Benson.jpg'),
     bio: `Frank Weston Benson was a founding member of the Ten American Painters and one of the most
     commercially successful American artists of his era. Like his close friend Edmund Tarbell, he trained
     in Paris and taught at the Boston Museum School. His early Impressionist work features luminous outdoor
@@ -629,15 +617,11 @@ const CONTENT = {
     against glittering water. In later decades he turned to sporting subjects, becoming especially celebrated
     for his etchings and watercolors of wildfowl in flight.`,
     works: [
-      { title: 'Portrait in White', date: '1889', img: wikiImg('Frank W. Benson - Portrait in White - Google Art Project.jpg') },
+      { title: 'Portrait in White', date: '1889', img: wikiImg('Portrait in White 1889 Frank Weston Benson.jpg') },
       { title: 'Summer', date: '1909', img: wikiImg('Frank Weston Benson - Summer - Google Art Project.jpg') },
-      { title: 'Calm Morning', date: '1904', img: wikiImg('Frank Weston Benson - Calm Morning - Google Art Project.jpg') },
-      { title: 'Eleanor', date: '1907', img: wikiImg('Frank Benson - Eleanor.jpg') },
-      { title: 'Sisters', date: '1899', img: wikiImg('Frank Weston Benson - Sisters.jpg') },
-      { title: 'February Azure', date: '1904', img: wikiImg('Grabar February azure 1904 gtg.jpg'), desc: 'A birch tree covered in hoarfrost against a brilliant blue winter sky' },
-      { title: 'March Snow', date: '1904', img: wikiImg('Snow in March by Igor Grabar, 1904.jpg'), desc: 'Melting snow in a birch forest as the first signs of spring appear' },
-      { title: 'The Frost', date: '1905', img: wikiImg('The Frost by Igor Grabar, 1905.jpg'), desc: 'Frost-covered trees sparkling in the crystalline Russian winter light' },
-      { title: 'Untouched Snow', date: '1904', img: wikiImg('Grabar February azure study 1904 nhmrb.jpg'), desc: 'A study of pristine snow beneath birches, a preparatory work for February Azure' },
+      { title: 'Calm Morning', date: '1904', img: wikiImg('Calm Morning 1904 Frank Weston Benson.jpg') },
+      { title: 'Eleanor', date: '1907', img: wikiImg('Eleanor 1907 Frank Weston Benson.jpg') },
+      { title: 'The Sisters', date: '1899', img: wikiImg('The sisters 1889 Frank Weston Benson.jpg') },
     ]
   },
 
@@ -645,7 +629,7 @@ const CONTENT = {
     title: 'Willard Metcalf',
     dates: '1858–1925',
     nationality: 'American',
-    portrait: wikiImg('Willard Metcalf - May Night - Google Art Project.jpg'),
+    portrait: wikiImg('Willard Metcalf May Night.png'),
     bio: `Willard Metcalf was a founding member of the Ten American Painters whose career took a
     remarkable late arc. After years of struggle and personal difficulty, he rediscovered his artistic
     voice around 1905 and produced his finest paintings — luminous, deeply felt landscapes of rural
@@ -654,16 +638,11 @@ const CONTENT = {
     from more fashionable contemporaries. His spring and winter landscapes in particular are among
     the most beloved works in American Impressionism.`,
     works: [
-      { title: 'May Night', date: '1906', img: wikiImg('Willard Metcalf - May Night - Google Art Project.jpg') },
-      { title: 'Gloucester Harbor', date: '1895', img: wikiImg('Willard Leroy Metcalf - Gloucester Harbor - Google Art Project.jpg') },
-      { title: 'Twin Birches', date: '1908', img: wikiImg('Willard Metcalf - Twin Birches.jpg') },
-      { title: 'The North Country', date: '1923', img: wikiImg('Willard Metcalf - The North Country - Google Art Project.jpg') },
-      { title: 'Icebound', date: '1909', img: wikiImg('Willard Metcalf - Icebound - Google Art Project.jpg') },
-      { title: 'Summer Evening on Skagen\'s Beach', date: '1899', img: wikiImg('P.S. Krøyer - Summer evening on Skagen\'s Beach. Anna Ancher and Marie Krøyer walking together. - Google Art Project.jpg'), desc: 'Two women strolling along the shore in the luminous Scandinavian blue hour' },
-      { title: 'Hip, Hip, Hurrah!', date: '1888', img: wikiImg('Peter Severin Krøyer - Hip Hip Hurrah! Artist Festival at Skagen - Google Art Project.jpg'), desc: 'Artists raising their glasses at a festive outdoor lunch among the Skagen colony' },
-      { title: 'Summer Evening at Skagen', date: '1892', img: wikiImg('Peder Severin Krøyer - Summer evening at Skagen. The artist\'s wife and dog by the shore - Google Art Project.jpg'), desc: 'Krøyer\'s wife Marie and their dog walking along the beach at twilight' },
-      { title: 'Fishermen on Skagen\'s Beach', date: '1883', img: wikiImg('Peder Severin Krøyer - Fishermen on Skagen\'s North Beach - Google Art Project.jpg'), desc: 'Fishermen hauling boats on the wide sandy beach at Skagen\'s northern tip' },
-      { title: 'Marie Krøyer on the Beach', date: '1893', img: wikiImg('P.S. Krøyer - Marie Krøyer painting on Skagen\'s Beach - Google Art Project.jpg'), desc: 'The artist\'s wife painting en plein air on the Skagen shore' },
+      { title: 'May Night', date: '1906', img: wikiImg('Willard Metcalf May Night.png') },
+      { title: 'A Family of Birches', date: 'c. 1906', img: wikiImg('Willard Leroy Metcalf - A Family of Birches - Google Art Project.jpg') },
+      { title: 'Twin Birches', date: '1908', img: wikiImg('\'The Twin Birches\' by Willard L. Metcalf, 1908.JPG') },
+      { title: 'Sunlight and Shadow', date: 'c. 1909', img: wikiImg('Willard Leroy Metcalf - Sunlight and Shadow - Google Art Project.jpg') },
+      { title: 'Icebound', date: '1909', img: wikiImg('Ice Bound, Art Institute Of Chicago, Willard L. Metcalf (NBY 416358).jpg') },
     ]
   },
 
@@ -671,7 +650,7 @@ const CONTENT = {
     title: 'Robert Reid',
     dates: '1862–1929',
     nationality: 'American',
-    portrait: wikiImg('Robert Reid - Fleur-de-lis - Google Art Project.jpg'),
+    portrait: wikiImg('Robert Lewis Reid - Fleur de Lis.jpg'),
     bio: `Robert Reid was a founding member of the Ten American Painters known for his decorative,
     flower-filled canvases that blend Impressionist technique with an almost mural-like sense of
     design. Trained in Boston and Paris, he worked prolifically in oils, watercolors, and stained
@@ -680,16 +659,11 @@ const CONTENT = {
     gardens or interiors, suffused with pale light and surrounded by blossoms in a manner that
     bridges Impressionism and the decorative arts movement.`,
     works: [
-      { title: 'Fleur-de-lis', date: 'c. 1899', img: wikiImg('Robert Reid - Fleur-de-lis - Google Art Project.jpg') },
-      { title: 'The White Parasol', date: 'c. 1907', img: wikiImg('Robert Reid - The White Parasol - Google Art Project.jpg') },
-      { title: 'Poppies', date: 'c. 1891', img: wikiImg('Robert Reid - Poppies - Google Art Project.jpg') },
-      { title: 'The Violet Kimono', date: 'c. 1910', img: wikiImg('Robert Reid - The Violet Kimono - Google Art Project.jpg') },
-      { title: 'Spring', date: 'c. 1899', img: wikiImg('Robert Reid - Spring - Google Art Project.jpg') },
-      { title: 'Golden Summer, Eaglemont', date: '1889', img: wikiImg('\'Golden Summer, Eaglemont\' by Arthur Streeton, 1889.jpg'), desc: 'A panoramic view of golden grasslands under the intense Australian summer sun' },
-      { title: 'Fire\'s On', date: '1891', img: wikiImg('Arthur Streeton - Fire\'s on - Google Art Project.jpg'), desc: 'Workers at a railway tunnel blasting site in the Blue Mountains' },
-      { title: 'Still Glides the Stream', date: '1890', img: wikiImg('Arthur Streeton - \'Still glides the stream, and shall for ever glide\' - Google Art Project.jpg'), desc: 'The tranquil Yarra River winding through the Australian bush near Heidelberg' },
-      { title: 'The Purple Noon\'s Transparent Might', date: '1896', img: wikiImg('Arthur Streeton - The purple noon\'s transparent might - Google Art Project.jpg'), desc: 'The Hawkesbury River valley shimmering under a blazing midday haze' },
-      { title: 'Near Heidelberg', date: '1890', img: wikiImg('Arthur Streeton - Near Heidelberg - Google Art Project.jpg'), desc: 'Sun-bleached paddocks and eucalyptus trees in the Melbourne countryside' },
+      { title: 'Fleur-de-Lis', date: 'c. 1899', img: wikiImg('Robert Lewis Reid - Fleur de Lis.jpg') },
+      { title: 'The White Parasol', date: 'c. 1907', img: wikiImg('Robert Reid - The White Parasol - 1909.7.57 - Smithsonian American Art Museum.jpg') },
+      { title: 'Spring', date: 'c. 1899', img: wikiImg('Robert Lewis Reid - Spring.jpg') },
+      { title: 'The Violet Kimono', date: 'c. 1910', img: wikiImg('Robert Reid - The Violet Kimono - 1929.6.88 - Smithsonian American Art Museum.jpg') },
+      { title: 'Spring (II)', date: 'c. 1905', img: wikiImg('Robert Lewis Reid - Spring 02.jpg') },
     ]
   },
 
