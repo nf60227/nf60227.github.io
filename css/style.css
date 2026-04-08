@@ -14,18 +14,18 @@
   --font-serif: 'Source Serif 4', 'Georgia', 'Times New Roman', serif;
   --font-sans: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
 
-  --color-bg: #faf9f6;
+  --color-bg: #f7f5f5;
   --color-surface: #ffffff;
-  --color-sidebar-bg: #1a1a2e;
-  --color-sidebar-text: #d4d4d8;
-  --color-sidebar-hover: #e4e4e7;
+  --color-sidebar-bg: #1c0008;
+  --color-sidebar-text: #d4b8be;
+  --color-sidebar-hover: #f0d8dc;
   --color-sidebar-active: #ffffff;
-  --color-accent: #2c5f8a;
-  --color-accent-hover: #1d4567;
-  --color-text: #2d2d2d;
-  --color-text-secondary: #5a5a5a;
-  --color-border: #d4d0c8;
-  --color-border-light: #e8e5de;
+  --color-accent: #c41230;
+  --color-accent-hover: #8c0019;
+  --color-text: #1a1a1a;
+  --color-text-secondary: #5a4a4d;
+  --color-border: #d4c8c9;
+  --color-border-light: #ece6e7;
 
   --sidebar-width: 280px;
   --content-max-width: 900px;
@@ -92,7 +92,7 @@ body {
   top: 1rem;
   left: 1rem;
   z-index: 200;
-  background: var(--color-sidebar-bg);
+  background: var(--color-accent);
   border: none;
   border-radius: 4px;
   padding: 0.6rem;
@@ -267,7 +267,7 @@ blockquote {
   padding: 0.75rem 1.25rem;
   font-style: italic;
   color: var(--color-text-secondary);
-  background: rgba(44, 95, 138, 0.03);
+  background: rgba(196, 18, 48, 0.03);
 }
 
 /* --- Buttons (JSTOR style) --- */
@@ -288,8 +288,8 @@ blockquote {
 }
 
 .btn:hover {
-  background: #f0efe9;
-  border-color: #b0ada4;
+  background: #f5eaec;
+  border-color: #c4a0a6;
 }
 
 .btn-primary {
@@ -335,7 +335,7 @@ blockquote {
   height: 180px;
   object-fit: cover;
   display: block;
-  background: #e8e5de;
+  background: #ece6e7;
 }
 
 .artist-card-body {
@@ -381,7 +381,7 @@ blockquote {
   height: 200px;
   object-fit: cover;
   display: block;
-  background: #e8e5de;
+  background: #ece6e7;
 }
 
 .gallery-caption {
@@ -418,7 +418,7 @@ blockquote {
   object-fit: cover;
   border-radius: 4px;
   flex-shrink: 0;
-  background: #e8e5de;
+  background: #ece6e7;
 }
 
 .artist-bio h1 {
@@ -453,7 +453,7 @@ blockquote {
   font-weight: 500;
   padding: 0.2rem 0.6rem;
   border-radius: 2px;
-  background: rgba(44, 95, 138, 0.08);
+  background: rgba(196, 18, 48, 0.08);
   color: var(--color-accent);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -695,7 +695,7 @@ img[data-failed]::after {
   color: #999;
   text-align: center;
   padding: 1rem;
-  background: #e8e5de;
+  background: #ece6e7;
 }
 
 /* Fade-in animation for content */
