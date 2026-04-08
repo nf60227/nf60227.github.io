@@ -141,28 +141,37 @@ const CONTENT = {
 
   // ─── HOME / OVERVIEW ───
   home: {
-    title: 'Impressionism: A Global Survey',
-    meta: 'An exploration of the movement, its artists, and their enduring works',
-    heroImg: wikiImg('Claude Monet, Impression, soleil levant.jpg', 1200),
-    heroTitle: 'Impression, Sunrise',
-    heroSub: 'Claude Monet, 1872 — The painting that gave the movement its name',
+    title: 'American Impressionism',
+    meta: 'Ten painters who brought the light of France to the American landscape',
+    heroImg: wikiImg('Mary Cassatt - The Child\'s Bath - Google Art Project.jpg', 1200),
+    heroTitle: 'The Child\'s Bath',
+    heroSub: 'Mary Cassatt, 1893 — One of the defining works of American Impressionism',
     body: `
-      <p>Impressionism emerged in Paris in the 1860s and 1870s as a radical departure from academic painting.
-      Characterized by visible brushstrokes, open composition, emphasis on light in its changing qualities,
-      and ordinary subject matter, the movement challenged the conventions of the French Salon and forever
-      altered the trajectory of Western art.</p>
+      <p>American Impressionism flourished between the 1880s and 1920s, as painters who had trained or
+      traveled in France brought the movement's radical techniques home. Working with visible brushstrokes,
+      vibrant color, and a commitment to capturing fleeting effects of light, these artists transformed
+      the New England landscape, the urban streetscape, and everyday domestic life into luminous paintings
+      that stand among the finest in American art history.</p>
 
-      <p>What began as a small group of French painters exhibiting independently soon grew into an international
-      phenomenon. From the sun-drenched coasts of Spain to the eucalyptus-lined creeks of Australia, artists
-      around the world adopted and adapted impressionist techniques to capture the fleeting effects of light
-      and atmosphere in their own landscapes and cultures.</p>
+      <p>Unlike their French counterparts, the American Impressionists often maintained a stronger emphasis
+      on draftsmanship and a more restrained palette — reflecting both their academic training and the
+      cooler, clearer light of the northeastern United States. Organizations like the Ten American Painters
+      (founded 1897) helped establish Impressionism as the dominant mode of serious American painting
+      at the turn of the twentieth century.</p>
 
-      <h2 class="section-title">Explore by Region</h2>
+      <h2 class="section-title">The Ten Artists</h2>
     `,
     cards: [
-      { section: 'monet', name: 'French Impressionists', info: 'Monet, Renoir, Degas, Morisot & more', img: wikiImg('Claude Monet - Water Lilies - 1906, Chicago.jpg') },
-      { section: 'cassatt', name: 'American Impressionists', info: 'Cassatt, Hassam, Robinson & more', img: wikiImg('Mary Cassatt - The Child\'s Bath - Google Art Project.jpg') },
-      { section: 'sorolla', name: 'Global Impressionists', info: 'Sorolla, Corinth, Grabar & more', img: wikiImg('Joaquín Sorolla y Bastida - Strolling along the Seashore - Google Art Project.jpg') },
+      { section: 'cassatt', name: 'Mary Cassatt', info: '1844–1926 · Philadelphia', img: wikiImg('Mary Cassatt - The Child\'s Bath - Google Art Project.jpg') },
+      { section: 'hassam', name: 'Childe Hassam', info: '1859–1935 · Boston', img: wikiImg('Childe Hassam - Washington Arch, Spring - Google Art Project.jpg') },
+      { section: 'robinson', name: 'Theodore Robinson', info: '1852–1896 · Vermont', img: wikiImg('Theodore Robinson - The Wedding March.jpg') },
+      { section: 'twachtman', name: 'John Henry Twachtman', info: '1853–1902 · Cincinnati', img: wikiImg('John Henry Twachtman - Icebound - Google Art Project.jpg') },
+      { section: 'weir', name: 'J. Alden Weir', info: '1852–1919 · Connecticut', img: wikiImg('Julian Alden Weir - The Factory Village - Google Art Project.jpg') },
+      { section: 'chase', name: 'William Merritt Chase', info: '1849–1916 · Indiana', img: wikiImg('William Merritt Chase - A Friendly Call - Google Art Project.jpg') },
+      { section: 'tarbell', name: 'Edmund Tarbell', info: '1862–1938 · Massachusetts', img: wikiImg('Edmund C. Tarbell - Three Sisters - A Study in June Sunlight.jpg') },
+      { section: 'benson', name: 'Frank Weston Benson', info: '1862–1951 · Massachusetts', img: wikiImg('Frank W. Benson - Portrait in White - Google Art Project.jpg') },
+      { section: 'metcalf', name: 'Willard Metcalf', info: '1858–1925 · Maine', img: wikiImg('Willard Metcalf - May Night - Google Art Project.jpg') },
+      { section: 'reid', name: 'Robert Reid', info: '1862–1929 · Massachusetts', img: wikiImg('Robert Reid - Fleur-de-lis - Google Art Project.jpg') },
     ]
   },
 
@@ -556,21 +565,23 @@ const CONTENT = {
     ]
   },
 
-  // ─── GLOBAL IMPRESSIONISTS ───
-
-  sorolla: {
-    title: 'Joaquín Sorolla',
-    dates: '1863–1923',
-    nationality: 'Spanish',
-    portrait: wikiImg('Joaquin Sorolla by Gertrude Käsebier, 1908.jpg'),
-    bio: `Joaquín Sorolla y Bastida is Spain's greatest Impressionist and one of the most accomplished
-    painters of light in the history of art. Born in Valencia, he studied in Rome and Paris before
-    developing a luminous, large-scale plein air style that captured the intense Mediterranean light
-    of the Spanish coast. His beach scenes — children playing in the surf, fishermen hauling boats,
-    women in white dresses walking along the shore — shimmer with reflected sunlight and shadow. In
-    1911, the Hispanic Society of America commissioned him to paint a monumental series of fourteen
-    murals depicting the regions of Spain, a project that consumed his final productive years.`,
+  chase: {
+    title: 'William Merritt Chase',
+    dates: '1849–1916',
+    nationality: 'American',
+    portrait: wikiImg('William Merritt Chase - A Friendly Call - Google Art Project.jpg'),
+    bio: `William Merritt Chase was one of the most influential American painters of the Gilded Age and a
+    tireless champion of modern art in the United States. Trained in Munich and New York, he established
+    the Shinnecock Hills Summer School of Art on Long Island in 1891 — the first outdoor art school in
+    America — and later founded the Chase School, which became the New York School of Art. His work ranges
+    from bravura studio interiors to sun-flooded plein air landscapes, and his teaching shaped a generation
+    of American modernists including Georgia O'Keeffe and Edward Hopper.`,
     works: [
+      { title: 'A Friendly Call', date: '1895', img: wikiImg('William Merritt Chase - A Friendly Call - Google Art Project.jpg') },
+      { title: 'At the Seaside', date: 'c. 1892', img: wikiImg('William Merritt Chase - At the Seaside.jpg') },
+      { title: 'The Nursery', date: 'c. 1890', img: wikiImg('William Merritt Chase - The Nursery - Google Art Project.jpg') },
+      { title: 'Idle Hours', date: 'c. 1894', img: wikiImg('William Merritt Chase - Idle Hours - Google Art Project.jpg') },
+      { title: 'Hall at Shinnecock', date: '1892', img: wikiImg('William Merritt Chase - Hall at Shinnecock - Google Art Project.jpg') },
       { title: 'Walk on the Beach', date: '1909', img: wikiImg('Joaquín Sorolla y Bastida - Strolling along the Seashore - Google Art Project.jpg'), desc: 'Women in white strolling along the shore with wind-swept reflections in wet sand' },
       { title: 'Boys on the Beach', date: '1910', img: wikiImg('Joaquín Sorolla y Bastida - Boys on the Beach - Google Art Project.jpg'), desc: 'Nude boys playing in the surf under blazing Mediterranean sunlight' },
       { title: 'Sewing the Sail', date: '1896', img: wikiImg('Joaquín Sorolla y Bastida - Sewing the Sail - Google Art Project.jpg'), desc: 'Fishermen mending a massive white sail in the shade of a courtyard' },
@@ -581,18 +592,23 @@ const CONTENT = {
     ]
   },
 
-  corinth: {
-    title: 'Lovis Corinth',
-    dates: '1858–1925',
-    nationality: 'German',
-    portrait: wikiImg('Lovis Corinth Selbstporträt 1896.jpg'),
-    bio: `Lovis Corinth bridged Impressionism and Expressionism in German art. Trained in Munich and Paris,
-    he became a leading figure of the Berlin Secession, a progressive artists' association. His early
-    work combined impressionist brushwork with vigorous realism. After suffering a stroke in 1911, his
-    style became increasingly free and emotionally intense, anticipating Expressionism. His late landscapes
-    of the Walchensee in Bavaria are among the great achievements of early twentieth-century painting —
-    turbulent, deeply felt, and brilliantly colored.`,
+  tarbell: {
+    title: 'Edmund Tarbell',
+    dates: '1862–1938',
+    nationality: 'American',
+    portrait: wikiImg('Edmund C. Tarbell - Three Sisters - A Study in June Sunlight.jpg'),
+    bio: `Edmund Tarbell was the central figure of the Boston School, a group of painters who extended
+    Impressionism into intimate interior scenes of extraordinary refinement. Trained at the École des
+    Beaux-Arts in Paris, he returned to Boston and taught at the School of the Museum of Fine Arts for
+    decades, profoundly shaping New England's artistic culture. His mature work combines the dappled
+    light of Impressionism with the old-master quietude of Vermeer — sunlit rooms, women reading or
+    sewing, the play of light on white muslin and polished surfaces.`,
     works: [
+      { title: 'Three Sisters — A Study in June Sunlight', date: '1890', img: wikiImg('Edmund C. Tarbell - Three Sisters - A Study in June Sunlight.jpg') },
+      { title: 'Across the Room', date: 'c. 1899', img: wikiImg('Edmund Charles Tarbell - Across the Room - Google Art Project.jpg') },
+      { title: 'Girl Crocheting', date: '1904', img: wikiImg('Edmund C. Tarbell - Girl Crocheting - Google Art Project.jpg') },
+      { title: 'New England Interior', date: '1906', img: wikiImg('Tarbell Edmund New England Interior 1906.jpg') },
+      { title: 'In the Orchard', date: '1891', img: wikiImg('Edmund C. Tarbell - In the Orchard - Google Art Project.jpg') },
       { title: 'Walchensee, Panorama', date: '1924', img: wikiImg('Lovis Corinth - Walchensee, Panorama - Google Art Project.jpg'), desc: 'A sweeping view of the Bavarian alpine lake painted in bold, expressive strokes' },
       { title: 'Self-Portrait with Skeleton', date: '1896', img: wikiImg('Lovis Corinth Selbstporträt 1896.jpg'), desc: 'The artist posing with a studio skeleton in a darkly humorous self-portrait' },
       { title: 'Easter at Walchensee', date: '1922', img: wikiImg('Lovis Corinth Ostern am Walchensee 1922.jpg'), desc: 'The lake in spring with snow-capped mountains, painted after Corinth\'s stroke' },
@@ -601,18 +617,23 @@ const CONTENT = {
     ]
   },
 
-  grabar: {
-    title: 'Igor Grabar',
-    dates: '1871–1960',
-    nationality: 'Russian',
-    portrait: wikiImg('Grabar February azure 1904 gtg.jpg'),
-    bio: `Igor Grabar was the leading Russian Impressionist and a towering figure in Russian cultural
-    life as a painter, art historian, museum director, and restorer. After studying in Munich under
-    Anton Ažbe, he brought impressionist and post-impressionist techniques to Russian landscape painting.
-    His winter scenes — birch trees in hoarfrost, blue shadows on snow — capture the crystalline light
-    of the Russian countryside with a vibrancy that earned him comparison to Monet. He later directed
-    the Tretyakov Gallery and led major art restoration campaigns across the Soviet Union.`,
+  benson: {
+    title: 'Frank Weston Benson',
+    dates: '1862–1951',
+    nationality: 'American',
+    portrait: wikiImg('Frank W. Benson - Portrait in White - Google Art Project.jpg'),
+    bio: `Frank Weston Benson was a founding member of the Ten American Painters and one of the most
+    commercially successful American artists of his era. Like his close friend Edmund Tarbell, he trained
+    in Paris and taught at the Boston Museum School. His early Impressionist work features luminous outdoor
+    scenes of women and children in brilliant sunlight — figures posed on hillsides and breezy porches
+    against glittering water. In later decades he turned to sporting subjects, becoming especially celebrated
+    for his etchings and watercolors of wildfowl in flight.`,
     works: [
+      { title: 'Portrait in White', date: '1889', img: wikiImg('Frank W. Benson - Portrait in White - Google Art Project.jpg') },
+      { title: 'Summer', date: '1909', img: wikiImg('Frank Weston Benson - Summer - Google Art Project.jpg') },
+      { title: 'Calm Morning', date: '1904', img: wikiImg('Frank Weston Benson - Calm Morning - Google Art Project.jpg') },
+      { title: 'Eleanor', date: '1907', img: wikiImg('Frank Benson - Eleanor.jpg') },
+      { title: 'Sisters', date: '1899', img: wikiImg('Frank Weston Benson - Sisters.jpg') },
       { title: 'February Azure', date: '1904', img: wikiImg('Grabar February azure 1904 gtg.jpg'), desc: 'A birch tree covered in hoarfrost against a brilliant blue winter sky' },
       { title: 'March Snow', date: '1904', img: wikiImg('Snow in March by Igor Grabar, 1904.jpg'), desc: 'Melting snow in a birch forest as the first signs of spring appear' },
       { title: 'The Frost', date: '1905', img: wikiImg('The Frost by Igor Grabar, 1905.jpg'), desc: 'Frost-covered trees sparkling in the crystalline Russian winter light' },
@@ -620,18 +641,24 @@ const CONTENT = {
     ]
   },
 
-  kroyer: {
-    title: 'P.S. Krøyer',
-    dates: '1851–1909',
-    nationality: 'Danish (born Norway)',
-    portrait: wikiImg('P.S. Krøyer - Selvportrait - Skagens Museum.jpg'),
-    bio: `Peder Severin Krøyer was the central figure of the Skagen Painters, a colony of Scandinavian
-    artists who gathered at the northernmost tip of Denmark where the North Sea meets the Baltic. After
-    studying in Paris under Léon Bonnat, Krøyer brought impressionist techniques to the extraordinary
-    light of the Danish summer — the pale, luminous "blue hour" of Scandinavian evenings became his
-    signature subject. His beach scenes, depicting artists, fishermen, and elegant strollers in the
-    long twilight, are among the most beloved images in Scandinavian art.`,
+  metcalf: {
+    title: 'Willard Metcalf',
+    dates: '1858–1925',
+    nationality: 'American',
+    portrait: wikiImg('Willard Metcalf - May Night - Google Art Project.jpg'),
+    bio: `Willard Metcalf was a founding member of the Ten American Painters whose career took a
+    remarkable late arc. After years of struggle and personal difficulty, he rediscovered his artistic
+    voice around 1905 and produced his finest paintings — luminous, deeply felt landscapes of rural
+    New England in every season. Working in Connecticut, Vermont, and Maine, he captured the unique
+    quality of northeastern American light with a directness and emotional depth that set him apart
+    from more fashionable contemporaries. His spring and winter landscapes in particular are among
+    the most beloved works in American Impressionism.`,
     works: [
+      { title: 'May Night', date: '1906', img: wikiImg('Willard Metcalf - May Night - Google Art Project.jpg') },
+      { title: 'Gloucester Harbor', date: '1895', img: wikiImg('Willard Leroy Metcalf - Gloucester Harbor - Google Art Project.jpg') },
+      { title: 'Twin Birches', date: '1908', img: wikiImg('Willard Metcalf - Twin Birches.jpg') },
+      { title: 'The North Country', date: '1923', img: wikiImg('Willard Metcalf - The North Country - Google Art Project.jpg') },
+      { title: 'Icebound', date: '1909', img: wikiImg('Willard Metcalf - Icebound - Google Art Project.jpg') },
       { title: 'Summer Evening on Skagen\'s Beach', date: '1899', img: wikiImg('P.S. Krøyer - Summer evening on Skagen\'s Beach. Anna Ancher and Marie Krøyer walking together. - Google Art Project.jpg'), desc: 'Two women strolling along the shore in the luminous Scandinavian blue hour' },
       { title: 'Hip, Hip, Hurrah!', date: '1888', img: wikiImg('Peter Severin Krøyer - Hip Hip Hurrah! Artist Festival at Skagen - Google Art Project.jpg'), desc: 'Artists raising their glasses at a festive outdoor lunch among the Skagen colony' },
       { title: 'Summer Evening at Skagen', date: '1892', img: wikiImg('Peder Severin Krøyer - Summer evening at Skagen. The artist\'s wife and dog by the shore - Google Art Project.jpg'), desc: 'Krøyer\'s wife Marie and their dog walking along the beach at twilight' },
@@ -640,19 +667,24 @@ const CONTENT = {
     ]
   },
 
-  streeton: {
-    title: 'Arthur Streeton',
-    dates: '1867–1943',
-    nationality: 'Australian',
-    portrait: wikiImg('Tom Roberts - Arthur Streeton (sketch).jpg'),
-    bio: `Arthur Streeton was the most celebrated landscape painter of the Australian Impressionists
-    (also known as the Heidelberg School). Working alongside Tom Roberts, Charles Conder, and Frederick
-    McCubbin around Melbourne in the late 1880s, Streeton developed a luminous, high-keyed palette
-    uniquely suited to the intense light, golden grasslands, and blue distances of the Australian bush.
-    His panoramic canvases captured an emerging national identity, and works like <em>Golden Summer,
-    Eaglemont</em> became icons of Australian art. He later spent years in England and served as a war
-    artist in World War I before returning to Australia.`,
+  reid: {
+    title: 'Robert Reid',
+    dates: '1862–1929',
+    nationality: 'American',
+    portrait: wikiImg('Robert Reid - Fleur-de-lis - Google Art Project.jpg'),
+    bio: `Robert Reid was a founding member of the Ten American Painters known for his decorative,
+    flower-filled canvases that blend Impressionist technique with an almost mural-like sense of
+    design. Trained in Boston and Paris, he worked prolifically in oils, watercolors, and stained
+    glass — his windows for the Library of Congress and the Massachusetts State House rank among
+    the finest American decorative art of the period. His paintings typically feature women in
+    gardens or interiors, suffused with pale light and surrounded by blossoms in a manner that
+    bridges Impressionism and the decorative arts movement.`,
     works: [
+      { title: 'Fleur-de-lis', date: 'c. 1899', img: wikiImg('Robert Reid - Fleur-de-lis - Google Art Project.jpg') },
+      { title: 'The White Parasol', date: 'c. 1907', img: wikiImg('Robert Reid - The White Parasol - Google Art Project.jpg') },
+      { title: 'Poppies', date: 'c. 1891', img: wikiImg('Robert Reid - Poppies - Google Art Project.jpg') },
+      { title: 'The Violet Kimono', date: 'c. 1910', img: wikiImg('Robert Reid - The Violet Kimono - Google Art Project.jpg') },
+      { title: 'Spring', date: 'c. 1899', img: wikiImg('Robert Reid - Spring - Google Art Project.jpg') },
       { title: 'Golden Summer, Eaglemont', date: '1889', img: wikiImg('\'Golden Summer, Eaglemont\' by Arthur Streeton, 1889.jpg'), desc: 'A panoramic view of golden grasslands under the intense Australian summer sun' },
       { title: 'Fire\'s On', date: '1891', img: wikiImg('Arthur Streeton - Fire\'s on - Google Art Project.jpg'), desc: 'Workers at a railway tunnel blasting site in the Blue Mountains' },
       { title: 'Still Glides the Stream', date: '1890', img: wikiImg('Arthur Streeton - \'Still glides the stream, and shall for ever glide\' - Google Art Project.jpg'), desc: 'The tranquil Yarra River winding through the Australian bush near Heidelberg' },
@@ -660,4 +692,5 @@ const CONTENT = {
       { title: 'Near Heidelberg', date: '1890', img: wikiImg('Arthur Streeton - Near Heidelberg - Google Art Project.jpg'), desc: 'Sun-bleached paddocks and eucalyptus trees in the Melbourne countryside' },
     ]
   },
+
 };
