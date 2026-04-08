@@ -174,8 +174,9 @@
     html += `<h2 class="section-title">Selected Works</h2>`;
     html += '<div class="gallery-grid">';
     data.works.forEach(work => {
+      const desc = work.desc ? work.desc.replace(/"/g, '&quot;') : '';
       html += `
-        <div class="gallery-item" data-img="${work.img}" data-caption="${work.title}, ${work.date}">
+        <div class="gallery-item" data-img="${work.img}" data-caption="${work.title}, ${work.date}" data-desc="${desc}">
           <img class="gallery-img" src="${work.img}" alt="${work.title}" loading="lazy">
           <div class="gallery-caption">
             <div class="gallery-title">${work.title}</div>
@@ -216,6 +217,15 @@
     lightboxImg.src = item.dataset.img;
     lightboxImg.alt = item.dataset.caption;
     lightboxCaption.textContent = item.dataset.caption;
+    // Show description below caption if available
+    let descEl = lightbox.querySelector('.lightbox-desc');
+    if (!descEl) {
+      descEl = document.createElement('div');
+      descEl.className = 'lightbox-desc';
+      lightboxCaption.parentNode.insertBefore(descEl, lightboxCaption.nextSibling);
+    }
+    descEl.textContent = item.dataset.desc || '';
+    descEl.style.display = item.dataset.desc ? '' : 'none';
     lightboxPrev.disabled = idx === 0;
     lightboxNext.disabled = idx === galleryItems.length - 1;
     lightbox.classList.add('active');
@@ -243,13 +253,39 @@
     if (e.key === 'ArrowRight' && currentIndex < galleryItems.length - 1) openLightboxAt(currentIndex + 1);
   });
 
-  // ─── Broken image handler ───
+  // ─── Broken image handler with retry fallback ───
   document.addEventListener('error', function(e) {
-    if (e.target.tagName === 'IMG' && !e.target.dataset.failed) {
-      e.target.dataset.failed = '1';
-      e.target.style.background = '#e8e5de';
-      e.target.style.display = 'flex';
-      e.target.alt = e.target.alt || 'Image unavailable';
+    if (e.target.tagName !== 'IMG') return;
+    var img = e.target;
+    var src = img.src;
+    var retry = parseInt(img.dataset.retry || '0', 10);
+
+    // Extract filename from current URL
+    var filename = '';
+    if (src.indexOf('upload.wikimedia.org') !== -1) {
+      var m = src.match(/\/([^/]+)\/\d+px-/);
+      if (m) filename = decodeURIComponent(m[1]);
+    } else if (src.indexOf('Special:FilePath/') !== -1) {
+      filename = decodeURIComponent(src.split('Special:FilePath/')[1].split('?')[0]);
+    } else if (src.indexOf('thumb.php') !== -1) {
+      var tm = src.match(/[?&]f=([^&]+)/);
+      if (tm) filename = decodeURIComponent(tm[1]);
+    }
+
+    if (!filename) { img.dataset.failed = '1'; return; }
+
+    if (retry === 0) {
+      // First retry: try Special:FilePath with width
+      img.dataset.retry = '1';
+      img.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(filename) + '?width=800';
+    } else if (retry === 1) {
+      // Second retry: try without width param (full-size)
+      img.dataset.retry = '2';
+      img.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(filename);
+    } else {
+      // All retries exhausted
+      img.dataset.failed = '1';
+      img.alt = img.alt || 'Image unavailable';
     }
   }, true);
 
