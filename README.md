@@ -1,4 +1,4 @@
-# Impressionism: A Global Survey
+
 
 A static website exploring the Impressionist movement, its artists, and their works. Hosted on GitHub Pages.
 
