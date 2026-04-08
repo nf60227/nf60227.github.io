@@ -14,7 +14,7 @@ const CONTENT = {
   // ─── HOME / OVERVIEW ───
   home: {
     title: 'American Impressionism',
-    meta: 'Five painters who brought the light of France to the American landscape',
+    meta: 'Ten painters who brought the light of France to the American landscape',
     heroImg: wikiImg('Mary Cassatt - The Child\'s Bath - Google Art Project.jpg', 1200),
     heroTitle: 'The Child\'s Bath',
     heroSub: 'Mary Cassatt, 1893 — One of the defining works of American Impressionism',
@@ -31,7 +31,7 @@ const CONTENT = {
       (founded 1897) helped establish Impressionism as the dominant mode of serious American painting
       at the turn of the twentieth century.</p>
 
-      <h2 class="section-title">The Five Artists</h2>
+      <h2 class="section-title">The Ten Artists</h2>
     `,
     cards: [
       { section: 'cassatt', name: 'Mary Cassatt', info: '1844–1926 · Philadelphia', img: wikiImg('Mary Cassatt - The Child\'s Bath - Google Art Project.jpg') },
@@ -39,6 +39,11 @@ const CONTENT = {
       { section: 'robinson', name: 'Theodore Robinson', info: '1852–1896 · Vermont', img: wikiImg('Theodore Robinson - The Wedding March.jpg') },
       { section: 'twachtman', name: 'John Henry Twachtman', info: '1853–1902 · Cincinnati', img: wikiImg('John Henry Twachtman - Icebound - Google Art Project.jpg') },
       { section: 'weir', name: 'J. Alden Weir', info: '1852–1919 · Connecticut', img: wikiImg('Julian Alden Weir - The Factory Village - Google Art Project.jpg') },
+      { section: 'chase', name: 'William Merritt Chase', info: '1849–1916 · Indiana', img: wikiImg('William Merritt Chase - A Friendly Call - Google Art Project.jpg') },
+      { section: 'tarbell', name: 'Edmund Tarbell', info: '1862–1938 · Massachusetts', img: wikiImg('Edmund C. Tarbell - Three Sisters - A Study in June Sunlight.jpg') },
+      { section: 'benson', name: 'Frank Weston Benson', info: '1862–1951 · Massachusetts', img: wikiImg('Frank W. Benson - Portrait in White - Google Art Project.jpg') },
+      { section: 'metcalf', name: 'Willard Metcalf', info: '1858–1925 · Maine', img: wikiImg('Willard Metcalf - May Night - Google Art Project.jpg') },
+      { section: 'reid', name: 'Robert Reid', info: '1862–1929 · Massachusetts', img: wikiImg('Robert Reid - Fleur-de-lis - Google Art Project.jpg') },
     ]
   },
 
@@ -271,6 +276,108 @@ const CONTENT = {
       { title: 'The Factory Village', date: '1897', img: wikiImg('Julian Alden Weir - The Factory Village - Google Art Project.jpg') },
       { title: 'Midday Rest in New England', date: '1897', img: wikiImg('Julian Alden Weir - Midday Rest in New England - Google Art Project.jpg') },
       { title: 'The Ice Cutters', date: 'c. 1890', img: wikiImg('Julian Alden Weir - The Ice Cutters - Google Art Project.jpg') },
+    ]
+  },
+
+  chase: {
+    title: 'William Merritt Chase',
+    dates: '1849–1916',
+    nationality: 'American',
+    portrait: wikiImg('William Merritt Chase - A Friendly Call - Google Art Project.jpg'),
+    bio: `William Merritt Chase was one of the most influential American painters of the Gilded Age and a
+    tireless champion of modern art in the United States. Trained in Munich and New York, he established
+    the Shinnecock Hills Summer School of Art on Long Island in 1891 — the first outdoor art school in
+    America — and later founded the Chase School, which became the New York School of Art. His work ranges
+    from bravura studio interiors to sun-flooded plein air landscapes, and his teaching shaped a generation
+    of American modernists including Georgia O'Keeffe and Edward Hopper.`,
+    works: [
+      { title: 'A Friendly Call', date: '1895', img: wikiImg('William Merritt Chase - A Friendly Call - Google Art Project.jpg') },
+      { title: 'At the Seaside', date: 'c. 1892', img: wikiImg('William Merritt Chase - At the Seaside.jpg') },
+      { title: 'The Nursery', date: 'c. 1890', img: wikiImg('William Merritt Chase - The Nursery - Google Art Project.jpg') },
+      { title: 'Idle Hours', date: 'c. 1894', img: wikiImg('William Merritt Chase - Idle Hours - Google Art Project.jpg') },
+      { title: 'Hall at Shinnecock', date: '1892', img: wikiImg('William Merritt Chase - Hall at Shinnecock - Google Art Project.jpg') },
+    ]
+  },
+
+  tarbell: {
+    title: 'Edmund Tarbell',
+    dates: '1862–1938',
+    nationality: 'American',
+    portrait: wikiImg('Edmund C. Tarbell - Three Sisters - A Study in June Sunlight.jpg'),
+    bio: `Edmund Tarbell was the central figure of the Boston School, a group of painters who extended
+    Impressionism into intimate interior scenes of extraordinary refinement. Trained at the École des
+    Beaux-Arts in Paris, he returned to Boston and taught at the School of the Museum of Fine Arts for
+    decades, profoundly shaping New England's artistic culture. His mature work combines the dappled
+    light of Impressionism with the old-master quietude of Vermeer — sunlit rooms, women reading or
+    sewing, the play of light on white muslin and polished surfaces.`,
+    works: [
+      { title: 'Three Sisters — A Study in June Sunlight', date: '1890', img: wikiImg('Edmund C. Tarbell - Three Sisters - A Study in June Sunlight.jpg') },
+      { title: 'Across the Room', date: 'c. 1899', img: wikiImg('Edmund Charles Tarbell - Across the Room - Google Art Project.jpg') },
+      { title: 'Girl Crocheting', date: '1904', img: wikiImg('Edmund C. Tarbell - Girl Crocheting - Google Art Project.jpg') },
+      { title: 'New England Interior', date: '1906', img: wikiImg('Tarbell Edmund New England Interior 1906.jpg') },
+      { title: 'In the Orchard', date: '1891', img: wikiImg('Edmund C. Tarbell - In the Orchard - Google Art Project.jpg') },
+    ]
+  },
+
+  benson: {
+    title: 'Frank Weston Benson',
+    dates: '1862–1951',
+    nationality: 'American',
+    portrait: wikiImg('Frank W. Benson - Portrait in White - Google Art Project.jpg'),
+    bio: `Frank Weston Benson was a founding member of the Ten American Painters and one of the most
+    commercially successful American artists of his era. Like his close friend Edmund Tarbell, he trained
+    in Paris and taught at the Boston Museum School. His early Impressionist work features luminous outdoor
+    scenes of women and children in brilliant sunlight — figures posed on hillsides and breezy porches
+    against glittering water. In later decades he turned to sporting subjects, becoming especially celebrated
+    for his etchings and watercolors of wildfowl in flight.`,
+    works: [
+      { title: 'Portrait in White', date: '1889', img: wikiImg('Frank W. Benson - Portrait in White - Google Art Project.jpg') },
+      { title: 'Summer', date: '1909', img: wikiImg('Frank Weston Benson - Summer - Google Art Project.jpg') },
+      { title: 'Calm Morning', date: '1904', img: wikiImg('Frank Weston Benson - Calm Morning - Google Art Project.jpg') },
+      { title: 'Eleanor', date: '1907', img: wikiImg('Frank Benson - Eleanor.jpg') },
+      { title: 'Sisters', date: '1899', img: wikiImg('Frank Weston Benson - Sisters.jpg') },
+    ]
+  },
+
+  metcalf: {
+    title: 'Willard Metcalf',
+    dates: '1858–1925',
+    nationality: 'American',
+    portrait: wikiImg('Willard Metcalf - May Night - Google Art Project.jpg'),
+    bio: `Willard Metcalf was a founding member of the Ten American Painters whose career took a
+    remarkable late arc. After years of struggle and personal difficulty, he rediscovered his artistic
+    voice around 1905 and produced his finest paintings — luminous, deeply felt landscapes of rural
+    New England in every season. Working in Connecticut, Vermont, and Maine, he captured the unique
+    quality of northeastern American light with a directness and emotional depth that set him apart
+    from more fashionable contemporaries. His spring and winter landscapes in particular are among
+    the most beloved works in American Impressionism.`,
+    works: [
+      { title: 'May Night', date: '1906', img: wikiImg('Willard Metcalf - May Night - Google Art Project.jpg') },
+      { title: 'Gloucester Harbor', date: '1895', img: wikiImg('Willard Leroy Metcalf - Gloucester Harbor - Google Art Project.jpg') },
+      { title: 'Twin Birches', date: '1908', img: wikiImg('Willard Metcalf - Twin Birches.jpg') },
+      { title: 'The North Country', date: '1923', img: wikiImg('Willard Metcalf - The North Country - Google Art Project.jpg') },
+      { title: 'Icebound', date: '1909', img: wikiImg('Willard Metcalf - Icebound - Google Art Project.jpg') },
+    ]
+  },
+
+  reid: {
+    title: 'Robert Reid',
+    dates: '1862–1929',
+    nationality: 'American',
+    portrait: wikiImg('Robert Reid - Fleur-de-lis - Google Art Project.jpg'),
+    bio: `Robert Reid was a founding member of the Ten American Painters known for his decorative,
+    flower-filled canvases that blend Impressionist technique with an almost mural-like sense of
+    design. Trained in Boston and Paris, he worked prolifically in oils, watercolors, and stained
+    glass — his windows for the Library of Congress and the Massachusetts State House rank among
+    the finest American decorative art of the period. His paintings typically feature women in
+    gardens or interiors, suffused with pale light and surrounded by blossoms in a manner that
+    bridges Impressionism and the decorative arts movement.`,
+    works: [
+      { title: 'Fleur-de-lis', date: 'c. 1899', img: wikiImg('Robert Reid - Fleur-de-lis - Google Art Project.jpg') },
+      { title: 'The White Parasol', date: 'c. 1907', img: wikiImg('Robert Reid - The White Parasol - Google Art Project.jpg') },
+      { title: 'Poppies', date: 'c. 1891', img: wikiImg('Robert Reid - Poppies - Google Art Project.jpg') },
+      { title: 'The Violet Kimono', date: 'c. 1910', img: wikiImg('Robert Reid - The Violet Kimono - Google Art Project.jpg') },
+      { title: 'Spring', date: 'c. 1899', img: wikiImg('Robert Reid - Spring - Google Art Project.jpg') },
     ]
   },
 
