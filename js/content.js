@@ -13,28 +13,32 @@ const CONTENT = {
 
   // ─── HOME / OVERVIEW ───
   home: {
-    title: 'Impressionism: A Global Survey',
-    meta: 'An exploration of the movement, its artists, and their enduring works',
-    heroImg: wikiImg('Claude Monet, Impression, soleil levant.jpg', 1200),
-    heroTitle: 'Impression, Sunrise',
-    heroSub: 'Claude Monet, 1872 — The painting that gave the movement its name',
+    title: 'American Impressionism',
+    meta: 'Five painters who brought the light of France to the American landscape',
+    heroImg: wikiImg('Mary Cassatt - The Child\'s Bath - Google Art Project.jpg', 1200),
+    heroTitle: 'The Child\'s Bath',
+    heroSub: 'Mary Cassatt, 1893 — One of the defining works of American Impressionism',
     body: `
-      <p>Impressionism emerged in Paris in the 1860s and 1870s as a radical departure from academic painting.
-      Characterized by visible brushstrokes, open composition, emphasis on light in its changing qualities,
-      and ordinary subject matter, the movement challenged the conventions of the French Salon and forever
-      altered the trajectory of Western art.</p>
+      <p>American Impressionism flourished between the 1880s and 1920s, as painters who had trained or
+      traveled in France brought the movement's radical techniques home. Working with visible brushstrokes,
+      vibrant color, and a commitment to capturing fleeting effects of light, these artists transformed
+      the New England landscape, the urban streetscape, and everyday domestic life into luminous paintings
+      that stand among the finest in American art history.</p>
 
-      <p>What began as a small group of French painters exhibiting independently soon grew into an international
-      phenomenon. From the sun-drenched coasts of Spain to the eucalyptus-lined creeks of Australia, artists
-      around the world adopted and adapted impressionist techniques to capture the fleeting effects of light
-      and atmosphere in their own landscapes and cultures.</p>
+      <p>Unlike their French counterparts, the American Impressionists often maintained a stronger emphasis
+      on draftsmanship and a more restrained palette — reflecting both their academic training and the
+      cooler, clearer light of the northeastern United States. Organizations like the Ten American Painters
+      (founded 1897) helped establish Impressionism as the dominant mode of serious American painting
+      at the turn of the twentieth century.</p>
 
-      <h2 class="section-title">Explore by Region</h2>
+      <h2 class="section-title">The Five Artists</h2>
     `,
     cards: [
-      { section: 'monet', name: 'French Impressionists', info: 'Monet, Renoir, Degas, Morisot & more', img: wikiImg('Claude Monet - Water Lilies - 1906, Chicago.jpg') },
-      { section: 'cassatt', name: 'American Impressionists', info: 'Cassatt, Hassam, Robinson & more', img: wikiImg('Mary Cassatt - The Child\'s Bath - Google Art Project.jpg') },
-      { section: 'sorolla', name: 'Global Impressionists', info: 'Sorolla, Corinth, Grabar & more', img: wikiImg('Joaquín Sorolla y Bastida - Strolling along the Seashore - Google Art Project.jpg') },
+      { section: 'cassatt', name: 'Mary Cassatt', info: '1844–1926 · Philadelphia', img: wikiImg('Mary Cassatt - The Child\'s Bath - Google Art Project.jpg') },
+      { section: 'hassam', name: 'Childe Hassam', info: '1859–1935 · Boston', img: wikiImg('Childe Hassam - Washington Arch, Spring - Google Art Project.jpg') },
+      { section: 'robinson', name: 'Theodore Robinson', info: '1852–1896 · Vermont', img: wikiImg('Theodore Robinson - The Wedding March.jpg') },
+      { section: 'twachtman', name: 'John Henry Twachtman', info: '1853–1902 · Cincinnati', img: wikiImg('John Henry Twachtman - Icebound - Google Art Project.jpg') },
+      { section: 'weir', name: 'J. Alden Weir', info: '1852–1919 · Connecticut', img: wikiImg('Julian Alden Weir - The Factory Village - Google Art Project.jpg') },
     ]
   },
 
@@ -164,164 +168,6 @@ const CONTENT = {
     `
   },
 
-  // ─── FRENCH IMPRESSIONISTS ───
-
-  monet: {
-    title: 'Claude Monet',
-    dates: '1840–1926',
-    nationality: 'French',
-    portrait: wikiImg('Claude Monet 1899 Nadar crop.jpg'),
-    bio: `Oscar-Claude Monet is often regarded as the founder and most consistent practitioner of Impressionism.
-    Born in Paris and raised in Le Havre, he was introduced to plein air painting by Eugène Boudin as a teenager.
-    His lifelong obsession with capturing the effects of light led him to paint the same subjects repeatedly
-    under different conditions — haystacks, poplars, Rouen Cathedral, the Thames, and finally the water garden
-    at his home in Giverny, where he spent the last three decades of his life creating the monumental
-    <em>Water Lilies</em> (Nymphéas) series.`,
-    works: [
-      { title: 'Impression, Sunrise', date: '1872', img: wikiImg('Claude Monet, Impression, soleil levant.jpg') },
-      { title: 'Water Lilies (Chicago)', date: '1906', img: wikiImg('Claude Monet - Water Lilies - 1906, Chicago.jpg') },
-      { title: 'Woman with a Parasol', date: '1875', img: wikiImg('Claude Monet - Woman with a Parasol - Madame Monet and Her Son - Google Art Project.jpg') },
-      { title: 'The Japanese Footbridge', date: '1899', img: wikiImg('Claude Monet - Water Lilies and Japanese Bridge.jpg') },
-      { title: 'Rouen Cathedral (Sunlight)', date: '1894', img: wikiImg('Claude Monet - Rouen Cathedral, Facade (Sunset).JPG') },
-      { title: 'San Giorgio Maggiore at Dusk', date: '1908', img: wikiImg('Claude Monet, Saint-Georges majeur au crépuscule.jpg') },
-      { title: 'The Thames below Westminster', date: '1871', img: wikiImg('Claude Monet - The Thames below Westminster.jpg') },
-      { title: 'Haystacks (End of Summer)', date: '1891', img: wikiImg('Claude Monet - Meules - Google Art Project.jpg') },
-      { title: 'Poplars on the Epte', date: '1891', img: wikiImg('Claude Monet - Poplars on the Epte - Google Art Project.jpg') },
-      { title: 'The Magpie', date: '1869', img: wikiImg('Claude Monet - The Magpie - Google Art Project.jpg') },
-    ]
-  },
-
-  renoir: {
-    title: 'Pierre-Auguste Renoir',
-    dates: '1841–1919',
-    nationality: 'French',
-    portrait: wikiImg('Pierre-Auguste Renoir - Autoportrait 5.JPG'),
-    bio: `Renoir was the most sensuous of the Impressionists, celebrated for his luminous, warm palette and
-    his joyful depictions of Parisian social life. A porcelain painter in his youth, he brought a craftsman's
-    feel for surface and decoration to his work. In the 1880s he went through a "dry" or "Ingres" period,
-    tightening his drawing under the influence of classical art, before returning to a softer, more
-    voluptuous style in his final decades. Despite severe rheumatoid arthritis that confined him to a
-    wheelchair, he continued painting until his death.`,
-    works: [
-      { title: 'Dance at Le Moulin de la Galette', date: '1876', img: wikiImg('Pierre-Auguste Renoir, Le Moulin de la Galette.jpg') },
-      { title: 'Luncheon of the Boating Party', date: '1881', img: wikiImg('Pierre-Auguste Renoir - Luncheon of the Boating Party - Google Art Project.jpg') },
-      { title: 'La Grenouillère', date: '1869', img: wikiImg('Auguste Renoir - La Grenouillère - Google Art Project.jpg') },
-      { title: 'Girl with a Watering Can', date: '1876', img: wikiImg('Auguste Renoir - A Girl with a Watering Can - Google Art Project.jpg') },
-      { title: 'Dance at Bougival', date: '1883', img: wikiImg('Pierre-Auguste Renoir - Suzanne Valadon - Dance at Bougival.jpg') },
-      { title: 'Two Sisters (On the Terrace)', date: '1881', img: wikiImg('Pierre-Auguste Renoir - Two Sisters (On the Terrace) - Google Art Project.jpg') },
-      { title: 'The Swing', date: '1876', img: wikiImg('Pierre-Auguste Renoir - The Swing - Google Art Project.jpg') },
-      { title: 'By the Seashore', date: '1883', img: wikiImg('Pierre-Auguste Renoir - By the Seashore - Google Art Project.jpg') },
-    ]
-  },
-
-  degas: {
-    title: 'Edgar Degas',
-    dates: '1834–1917',
-    nationality: 'French',
-    portrait: wikiImg('Edgar Degas self portrait 1855.jpeg'),
-    bio: `Degas is often classified among the Impressionists, though he preferred the term "Realist" and
-    differed from his colleagues in significant ways. Trained in the classical tradition, he maintained
-    a lifelong commitment to drawing and worked primarily in the studio rather than outdoors. His genius
-    lay in his radical compositions — influenced by Japanese prints and photography — and his penetrating
-    observation of movement, especially in his famous scenes of ballet dancers, racehorses, and women bathing.
-    He was also an accomplished sculptor, printmaker, and photographer.`,
-    works: [
-      { title: 'The Dance Class', date: '1874', img: wikiImg('Edgar Degas - The Ballet Class - Google Art Project.jpg') },
-      { title: 'L\'Absinthe', date: '1876', img: wikiImg('Edgar Degas - In a Café - Google Art Project.jpg') },
-      { title: 'The Star (L\'Étoile)', date: '1878', img: wikiImg('Edgar Degas - L\'Étoile.jpg') },
-      { title: 'Blue Dancers', date: 'c. 1899', img: wikiImg('Edgar Degas - Blue Dancers - Google Art Project.jpg') },
-      { title: 'The Dance Foyer at the Opera', date: '1872', img: wikiImg('Edgar Degas - The Dance Foyer at the Opera on the rue Le Peletier - Google Art Project.jpg') },
-      { title: 'At the Races', date: '1877–80', img: wikiImg('Edgar Degas - At the Races - Google Art Project.jpg') },
-      { title: 'The Tub', date: '1886', img: wikiImg('Edgar Degas - The Tub - Google Art Project.jpg') },
-      { title: 'Cotton Exchange, New Orleans', date: '1873', img: wikiImg('Edgar Degas - A Cotton Office in New Orleans - Google Art Project.jpg') },
-    ]
-  },
-
-  morisot: {
-    title: 'Berthe Morisot',
-    dates: '1841–1895',
-    nationality: 'French',
-    portrait: wikiImg('Edouard Manet - Berthe Morisot With a Bouquet of Violets - Google Art Project.jpg'),
-    bio: `Berthe Morisot was one of the founding members of the Impressionist group and participated in
-    seven of the eight exhibitions. Encouraged by Corot and later influenced by her brother-in-law Édouard
-    Manet, she developed a distinctive style marked by loose, feathery brushwork and a delicate palette of
-    whites, pastels, and silvery greens. Her subjects — domestic interiors, gardens, women and children —
-    reflected her world, but her painterly freedom and compositional daring were anything but conventional.
-    She was instrumental in organizing the group's exhibitions and securing critical support.`,
-    works: [
-      { title: 'The Cradle', date: '1872', img: wikiImg('Berthe Morisot - The Cradle - Google Art Project.jpg') },
-      { title: 'Summer\'s Day', date: '1879', img: wikiImg('Berthe Morisot - Jour d\'été - Musée d\'arts de Nantes.jpg') },
-      { title: 'Woman at Her Toilette', date: 'c. 1875–80', img: wikiImg('Berthe Morisot - Woman at Her Toilette - Google Art Project.jpg') },
-      { title: 'In the Garden at Maurecourt', date: '1884', img: wikiImg('Berthe Morisot - In the Garden at Maurecourt.jpg') },
-      { title: 'The Butterfly Hunt', date: '1874', img: wikiImg('Berthe Morisot - The Butterfly Hunt - Google Art Project.jpg') },
-      { title: 'Young Girl by the Window', date: '1878', img: wikiImg('Berthe Morisot - Young Girl by the Window - Google Art Project.jpg') },
-    ]
-  },
-
-  pissarro: {
-    title: 'Camille Pissarro',
-    dates: '1830–1903',
-    nationality: 'French (born Danish West Indies)',
-    portrait: wikiImg('Camille pissarro, autoritratto, 1873.JPG'),
-    bio: `The eldest of the Impressionists, Pissarro was the only artist to participate in all eight
-    independent exhibitions and served as a mentor and unifying figure for the group. Born in the Danish
-    West Indies (now the U.S. Virgin Islands), he brought a broad, cosmopolitan perspective to French
-    painting. His subjects ranged from rural landscapes and peasant scenes to the bustling boulevards
-    of Paris, which he painted from hotel windows in his later years. He briefly adopted Seurat's
-    Pointillist technique in the 1880s before returning to his own fluid, atmospheric approach.`,
-    works: [
-      { title: 'Boulevard Montmartre at Night', date: '1897', img: wikiImg('Camille Pissarro - The Boulevard Montmartre at Night - Google Art Project.jpg') },
-      { title: 'The Harvest, Pontoise', date: '1881', img: wikiImg('Camille Pissarro - La Récolte, Pontoise - Google Art Project.jpg') },
-      { title: 'The Boulevard Montmartre, Winter Morning', date: '1897', img: wikiImg('The Boulevard Montmartre on a Winter Morning.JPG') },
-      { title: 'Avenue de l\'Opéra, Sunshine', date: '1898', img: wikiImg('Camille Pissarro - Avenue de l\'Opéra - Sunshine, Winter Morning - Google Art Project.jpg') },
-      { title: 'Red Roofs', date: '1877', img: wikiImg('Camille Pissarro - Lordship Lane Station - Google Art Project.jpg') },
-      { title: 'The Côte des Bœufs at L\'Hermitage', date: '1877', img: wikiImg('Camille Pissarro - La Côte des Bœufs à l\'Hermitage - Google Art Project.jpg') },
-      { title: 'The Garden of the Tuileries on a Winter Afternoon', date: '1899', img: wikiImg('Camille Pissarro - The Garden of the Tuileries on a Winter Afternoon - Google Art Project.jpg') },
-    ]
-  },
-
-  sisley: {
-    title: 'Alfred Sisley',
-    dates: '1839–1899',
-    nationality: 'British (active in France)',
-    portrait: wikiImg('Renoir - Alfred Sisley - 1876.jpeg'),
-    bio: `Though born in Paris to English parents, Sisley was one of the most dedicated landscape painters
-    among the Impressionists. He rarely ventured beyond landscape, focusing on the countryside around
-    Paris — the Seine valley, Louveciennes, Marly-le-Roi, and Moret-sur-Loing, where he spent his final
-    years. His work is characterized by a delicate sensitivity to the sky, which he considered "the chief
-    organ" of a landscape painting. Despite producing some of the finest Impressionist landscapes, Sisley
-    struggled financially throughout his life and died in poverty.`,
-    works: [
-      { title: 'Flood at Port-Marly', date: '1876', img: wikiImg('Alfred Sisley - Flood at Port-Marly - Google Art Project.jpg') },
-      { title: 'Bridge at Villeneuve-la-Garenne', date: '1872', img: wikiImg('Alfred Sisley - The Bridge at Villeneuve-la-Garenne - Google Art Project.jpg') },
-      { title: 'Snow at Louveciennes', date: '1878', img: wikiImg('Alfred Sisley - Snow at Louveciennes - Google Art Project.jpg') },
-      { title: 'The Lane of Poplars at Moret', date: '1890', img: wikiImg('Alfred Sisley 044.jpg') },
-      { title: 'Molesey Weir, Hampton Court', date: '1874', img: wikiImg('Alfred Sisley - Molesey Weir, Hampton Court - Google Art Project.jpg') },
-      { title: 'The Terrace at Saint-Germain', date: '1875', img: wikiImg('Alfred Sisley - The Terrace at Saint-Germain, Spring - Google Art Project.jpg') },
-    ]
-  },
-
-  caillebotte: {
-    title: 'Gustave Caillebotte',
-    dates: '1848–1894',
-    nationality: 'French',
-    portrait: wikiImg('G. Caillebotte - Autoportrait au chevalet.jpg'),
-    bio: `A wealthy naval engineer and painter, Caillebotte occupied a unique position among the Impressionists
-    as both a participant and a patron. His style combined impressionist light effects with a more precise,
-    almost photographic realism and a dramatic use of perspective that anticipated cinema. He organized and
-    financed several of the group's exhibitions, and his personal collection of impressionist paintings —
-    bequeathed to the French state upon his death — formed the nucleus of the impressionist holdings now
-    at the Musée d'Orsay.`,
-    works: [
-      { title: 'Paris Street; Rainy Day', date: '1877', img: wikiImg('Gustave Caillebotte - Jour de pluie à Paris.jpg') },
-      { title: 'The Floor Scrapers', date: '1875', img: wikiImg('Gustave Caillebotte - The Floor Planers - Google Art Project.jpg') },
-      { title: 'Man at His Bath', date: '1884', img: wikiImg('Gustave Caillebotte - Homme au bain.jpg') },
-      { title: 'Le pont de l\'Europe', date: '1876', img: wikiImg('G. Caillebotte - Le pont de l\'Europe.jpg') },
-      { title: 'Oarsmen on the Yerres', date: '1877', img: wikiImg('Gustave Caillebotte - Périssoires sur l\'Yerres - Google Art Project.jpg') },
-      { title: 'Young Man at His Window', date: '1876', img: wikiImg('Gustave Caillebotte - Young Man at His Window - Google Art Project.jpg') },
-    ]
-  },
-
   // ─── AMERICAN IMPRESSIONISTS ───
 
   cassatt: {
@@ -428,108 +274,4 @@ const CONTENT = {
     ]
   },
 
-  // ─── GLOBAL IMPRESSIONISTS ───
-
-  sorolla: {
-    title: 'Joaquín Sorolla',
-    dates: '1863–1923',
-    nationality: 'Spanish',
-    portrait: wikiImg('Joaquin Sorolla by Gertrude Käsebier, 1908.jpg'),
-    bio: `Joaquín Sorolla y Bastida is Spain's greatest Impressionist and one of the most accomplished
-    painters of light in the history of art. Born in Valencia, he studied in Rome and Paris before
-    developing a luminous, large-scale plein air style that captured the intense Mediterranean light
-    of the Spanish coast. His beach scenes — children playing in the surf, fishermen hauling boats,
-    women in white dresses walking along the shore — shimmer with reflected sunlight and shadow. In
-    1911, the Hispanic Society of America commissioned him to paint a monumental series of fourteen
-    murals depicting the regions of Spain, a project that consumed his final productive years.`,
-    works: [
-      { title: 'Walk on the Beach', date: '1909', img: wikiImg('Joaquín Sorolla y Bastida - Strolling along the Seashore - Google Art Project.jpg') },
-      { title: 'Boys on the Beach', date: '1910', img: wikiImg('Joaquín Sorolla y Bastida - Boys on the Beach - Google Art Project.jpg') },
-      { title: 'Sewing the Sail', date: '1896', img: wikiImg('Joaquín Sorolla y Bastida - Sewing the Sail - Google Art Project.jpg') },
-      { title: 'The Horse\'s Bath', date: '1909', img: wikiImg('Joaquin Sorolla - El baño del caballo.jpg') },
-      { title: 'My Wife and Daughters in the Garden', date: '1910', img: wikiImg('Joaquín Sorolla - My Wife and Daughters in the Garden, 1910 - Google Art Project.jpg') },
-      { title: 'Beach at Valencia', date: '1908', img: wikiImg('Joaquin Sorolla, 1908 - Beach of Valencia by Morning Light.jpg') },
-      { title: 'Children on the Beach', date: '1910', img: wikiImg('Joaquín Sorolla y Bastida - Children at the Beach (Javea) - Google Art Project.jpg') },
-    ]
-  },
-
-  corinth: {
-    title: 'Lovis Corinth',
-    dates: '1858–1925',
-    nationality: 'German',
-    portrait: wikiImg('Lovis Corinth Selbstporträt 1896.jpg'),
-    bio: `Lovis Corinth bridged Impressionism and Expressionism in German art. Trained in Munich and Paris,
-    he became a leading figure of the Berlin Secession, a progressive artists' association. His early
-    work combined impressionist brushwork with vigorous realism. After suffering a stroke in 1911, his
-    style became increasingly free and emotionally intense, anticipating Expressionism. His late landscapes
-    of the Walchensee in Bavaria are among the great achievements of early twentieth-century painting —
-    turbulent, deeply felt, and brilliantly colored.`,
-    works: [
-      { title: 'Walchensee, Panorama', date: '1924', img: wikiImg('Lovis Corinth - Walchensee, Panorama - Google Art Project.jpg') },
-      { title: 'Self-Portrait with Skeleton', date: '1896', img: wikiImg('Lovis Corinth Selbstporträt 1896.jpg') },
-      { title: 'Easter at Walchensee', date: '1922', img: wikiImg('Lovis Corinth Ostern am Walchensee 1922.jpg') },
-      { title: 'The Deposition', date: '1895', img: wikiImg('Lovis Corinth - Pieta - Google Art Project.jpg') },
-      { title: 'Slaughterhouse', date: '1893', img: wikiImg('Lovis Corinth - Schlachthaus - Google Art Project.jpg') },
-    ]
-  },
-
-  grabar: {
-    title: 'Igor Grabar',
-    dates: '1871–1960',
-    nationality: 'Russian',
-    portrait: wikiImg('Grabar February azure 1904 gtg.jpg'),
-    bio: `Igor Grabar was the leading Russian Impressionist and a towering figure in Russian cultural
-    life as a painter, art historian, museum director, and restorer. After studying in Munich under
-    Anton Ažbe, he brought impressionist and post-impressionist techniques to Russian landscape painting.
-    His winter scenes — birch trees in hoarfrost, blue shadows on snow — capture the crystalline light
-    of the Russian countryside with a vibrancy that earned him comparison to Monet. He later directed
-    the Tretyakov Gallery and led major art restoration campaigns across the Soviet Union.`,
-    works: [
-      { title: 'February Azure', date: '1904', img: wikiImg('Grabar February azure 1904 gtg.jpg') },
-      { title: 'March Snow', date: '1904', img: wikiImg('Snow in March by Igor Grabar, 1904.jpg') },
-      { title: 'The Frost', date: '1905', img: wikiImg('The Frost by Igor Grabar, 1905.jpg') },
-      { title: 'Untouched Snow', date: '1904', img: wikiImg('Grabar February azure study 1904 nhmrb.jpg') },
-    ]
-  },
-
-  kroyer: {
-    title: 'P.S. Krøyer',
-    dates: '1851–1909',
-    nationality: 'Danish (born Norway)',
-    portrait: wikiImg('P.S. Krøyer - Selvportrait - Skagens Museum.jpg'),
-    bio: `Peder Severin Krøyer was the central figure of the Skagen Painters, a colony of Scandinavian
-    artists who gathered at the northernmost tip of Denmark where the North Sea meets the Baltic. After
-    studying in Paris under Léon Bonnat, Krøyer brought impressionist techniques to the extraordinary
-    light of the Danish summer — the pale, luminous "blue hour" of Scandinavian evenings became his
-    signature subject. His beach scenes, depicting artists, fishermen, and elegant strollers in the
-    long twilight, are among the most beloved images in Scandinavian art.`,
-    works: [
-      { title: 'Summer Evening on Skagen\'s Beach', date: '1899', img: wikiImg('P.S. Krøyer - Summer evening on Skagen\'s Beach. Anna Ancher and Marie Krøyer walking together. - Google Art Project.jpg') },
-      { title: 'Hip, Hip, Hurrah!', date: '1888', img: wikiImg('Peter Severin Krøyer - Hip Hip Hurrah! Artist Festival at Skagen - Google Art Project.jpg') },
-      { title: 'Summer Evening at Skagen', date: '1892', img: wikiImg('Peder Severin Krøyer - Summer evening at Skagen. The artist\'s wife and dog by the shore - Google Art Project.jpg') },
-      { title: 'Fishermen on Skagen\'s Beach', date: '1883', img: wikiImg('Peder Severin Krøyer - Fishermen on Skagen\'s North Beach - Google Art Project.jpg') },
-      { title: 'Marie Krøyer on the Beach', date: '1893', img: wikiImg('P.S. Krøyer - Marie Krøyer painting on Skagen\'s Beach - Google Art Project.jpg') },
-    ]
-  },
-
-  streeton: {
-    title: 'Arthur Streeton',
-    dates: '1867–1943',
-    nationality: 'Australian',
-    portrait: wikiImg('Tom Roberts - Arthur Streeton (sketch).jpg'),
-    bio: `Arthur Streeton was the most celebrated landscape painter of the Australian Impressionists
-    (also known as the Heidelberg School). Working alongside Tom Roberts, Charles Conder, and Frederick
-    McCubbin around Melbourne in the late 1880s, Streeton developed a luminous, high-keyed palette
-    uniquely suited to the intense light, golden grasslands, and blue distances of the Australian bush.
-    His panoramic canvases captured an emerging national identity, and works like <em>Golden Summer,
-    Eaglemont</em> became icons of Australian art. He later spent years in England and served as a war
-    artist in World War I before returning to Australia.`,
-    works: [
-      { title: 'Golden Summer, Eaglemont', date: '1889', img: wikiImg('\'Golden Summer, Eaglemont\' by Arthur Streeton, 1889.jpg') },
-      { title: 'Fire\'s On', date: '1891', img: wikiImg('Arthur Streeton - Fire\'s on - Google Art Project.jpg') },
-      { title: 'Still Glides the Stream', date: '1890', img: wikiImg('Arthur Streeton - \'Still glides the stream, and shall for ever glide\' - Google Art Project.jpg') },
-      { title: 'The Purple Noon\'s Transparent Might', date: '1896', img: wikiImg('Arthur Streeton - The purple noon\'s transparent might - Google Art Project.jpg') },
-      { title: 'Near Heidelberg', date: '1890', img: wikiImg('Arthur Streeton - Near Heidelberg - Google Art Project.jpg') },
-    ]
-  },
 };
